@@ -1,0 +1,726 @@
+{
+  "settings": {
+    "brandName": "FOCUSOURCE",
+    "logo": "/assets/brand/fsc-symbol.svg?v=20261024",
+    "tagline": "Safer load securing with composite strapping",
+    "heroTitle": "Flexible strapping. Secure every load.",
+    "heroText": "Polyester composite strapping, wire buckles and tensioning tools. A complete system for securing pallets, steel and machinery — from your factory to their destination.",
+    "heroImage": "/assets/strapping/photos/composite-strapping-factory-green-floor.webp",
+    "email": "alexyuqd@gmail.com",
+    "phone": "+86 18661433121",
+    "whatsapp": "+86 18661433121",
+    "address": "Qingdao, Shandong, China",
+    "seoTitle": "Composite Strapping Manufacturer & Wire Buckles | FOCUSOURCE",
+    "seoDescription": "Composite strap and strapping systems with matched wire buckles and manual tensioners. Compare 13–32 mm specifications and request a quote from FOCUSOURCE.",
+    "seoKeywords": "composite strapping, polyester cord strapping, flexible packing belt, corded strapping manufacturer, wire buckles, cargo securing",
+    "siteUrl": "https://www.composite-strapping.com",
+    "gaId": "",
+    "googleAdsId": "",
+    "googleAdsLabel": ""
+  },
+  "content": {
+    "topbarText": "Factory-direct composite strapping · Worldwide delivery",
+    "heroEyebrow": "Polyester cord strapping manufacturer",
+    "heroPrimaryButton": "Request a load solution",
+    "heroSecondaryButton": "Explore strapping systems",
+    "heroProof": [
+      "High retained tension",
+      "Weather-resistant",
+      "Safer than steel banding"
+    ],
+    "stats": [
+      {
+        "value": "Polyester",
+        "label": "composite cord strapping"
+      },
+      {
+        "value": "Complete",
+        "label": "strap, buckle & tool systems"
+      },
+      {
+        "value": "Flexible",
+        "label": "solutions for industrial loads"
+      },
+      {
+        "value": "Export",
+        "label": "packing & supply support"
+      }
+    ],
+    "productsEyebrow": "Strapping systems",
+    "productsTitle": "A complete system for demanding loads.",
+    "productsText": "Match strap width, breaking strength, buckle and tensioning method to the weight, movement and transport conditions of your cargo.",
+    "capabilitiesEyebrow": "Engineered load security",
+    "capabilitiesTitle": "Strap, buckle and tool performance designed together.",
+    "capabilitiesText": "We control polyester cord selection, extrusion coating, winding and tensile testing to deliver consistent load security across every batch.",
+    "capabilitiesButton": "Discuss your load requirements",
+    "capabilities": [
+      {
+        "title": "Load application matching",
+        "text": "Strap width and strength recommendations for pallets, lumber, steel and machinery.",
+        "icon": "boxes"
+      },
+      {
+        "title": "Material consistency",
+        "text": "High-tenacity polyester cords with uniform polymer coating and controlled winding.",
+        "icon": "layers-3"
+      },
+      {
+        "title": "Quality control",
+        "text": "Batch testing for breaking strength, elongation and buckle joint efficiency.",
+        "icon": "scan-check"
+      },
+      {
+        "title": "Global logistics",
+        "text": "Export cartons, private labeling, documentation and flexible freight coordination.",
+        "icon": "ship"
+      }
+    ],
+    "processEyebrow": "How it works",
+    "processTitle": "From polyester yarn to a secure load.",
+    "process": [
+      {
+        "title": "Polyester cord preparation",
+        "text": "High-tenacity polyester yarns are aligned and tension-controlled before coating.",
+        "icon": "waves",
+        "image": "/assets/strapping/photos/polyester-yarn-preparation.webp"
+      },
+      {
+        "title": "Composite coating",
+        "text": "Parallel cords are bonded in a weather-resistant polymer coating for load flexibility.",
+        "icon": "layers-3",
+        "image": "/assets/strapping/photos/composite-strap-production-line.webp"
+      },
+      {
+        "title": "Winding & finishing",
+        "text": "Finished strap is dimension-checked, evenly wound and prepared for export packing.",
+        "icon": "circle-dot",
+        "image": "/assets/strapping/photos/strap-coil-winding.webp"
+      },
+      {
+        "title": "Load application",
+        "text": "Thread the buckle, tension the strap and check the secured load before dispatch.",
+        "icon": "activity",
+        "image": "/assets/strapping/photos/buckle-tensioning-application.webp"
+      }
+    ],
+    "aboutImage": "/assets/strapping/photos/polyester-cord-workshop.webp",
+    "aboutImageAlt": "Composite strapping production machinery, polyester fiber strap coils and organized materials in a clean workshop with a green floor.",
+    "aboutVideo": "/uploads/workshop-d1e21d629eeca0ff0db34ee9d5a96361.mp4",
+    "aboutVideoPoster": "/assets/strapping/photos/composite-strapping-production-video-poster.webp",
+    "aboutVideoTitle": "Composite Strapping Production Workshop | FOCUSOURCE",
+    "aboutVideoDescription": "View FOCUSOURCE composite strapping production equipment, polyester fiber strap coils and organized workshop operations in Qingdao, China.",
+    "aboutVideoUploadDate": "2026-10-20T17:19:56+08:00",
+    "aboutVideoDuration": "PT25.267S",
+    "aboutEyebrow": "Composite strapping workshop",
+    "aboutTitle": "Consistent load security starts on the production line.",
+    "aboutText": "Our workshop integrates polyester cord preparation, polymer coating, winding and tensile inspection. The technical team helps distributors and industrial users match strap and buckle specifications to real transport conditions.",
+    "aboutCertifications": [
+      "Polyester cord",
+      "Wire buckles",
+      "Tensioning tools",
+      "Export packing"
+    ],
+    "aboutQuote": "A reliable strapping system must retain tension through handling, vibration, weather and long-distance transport.",
+    "insightsEyebrow": "Load securing notes",
+    "insightsTitle": "Choose and apply strapping with confidence.",
+    "insightsLink": "View all insights",
+    "ctaEyebrow": "Have a load securing requirement?",
+    "ctaTitle": "Get a suitable strap, buckle and tool recommendation.",
+    "ctaButton": "Request a strapping quote",
+    "footerProductsTitle": "Strapping systems",
+    "footerCompanyTitle": "Company",
+    "footerContactTitle": "Contact",
+    "quoteButton": "Get a quote",
+    "inquiryEyebrow": "Project enquiry",
+    "inquiryTitle": "Tell us what you need.",
+    "inquiryText": "Share what you know. Our packaging team will reply within one business day.",
+    "inquiryButton": "Send enquiry",
+    "inquirySuccess": "Thanks. Your project has been received and our team will reply shortly."
+  },
+  "menu": [
+    {
+      "id": "m1",
+      "label": "Products",
+      "href": "#products"
+    },
+    {
+      "id": "m2",
+      "label": "Capabilities",
+      "href": "#capabilities"
+    },
+    {
+      "id": "m3",
+      "label": "Process",
+      "href": "#process"
+    },
+    {
+      "id": "m4",
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "id": "m5",
+      "label": "Insights",
+      "href": "#insights"
+    }
+  ],
+  "categories": [
+    {
+      "id": "c-composite-strapping",
+      "name": "Composite Strapping",
+      "slug": "composite-strapping",
+      "seoTitle": "Composite Strapping for Industrial Loads | FOCUSOURCE",
+      "seoDescription": "Explore polyester composite cord strapping for pallets, steel and machinery. Compare strap widths, breaking strength and packing options.",
+      "intro": "FOCUSOURCE composite cord strapping combines high-tenacity polyester yarns with a protective coating to secure demanding loads. Select width and strength according to cargo weight, handling and transport conditions.",
+      "applications": [
+        "Palletized cartons and drums",
+        "Steel pipes, profiles and coils",
+        "Timber, machinery and export cargo"
+      ],
+      "benefits": [
+        "High retained tension with shock absorption",
+        "Lightweight, flexible and easy to handle",
+        "Multiple widths and breaking-strength options"
+      ],
+      "faqs": [
+        {
+          "question": "How do I select a composite strap width?",
+          "answer": "Match the strap's system strength to the load, transport movement and lashing configuration. Share cargo details with us for a recommendation."
+        },
+        {
+          "question": "Can composite cord strapping be used outdoors?",
+          "answer": "It is suitable for many export and industrial applications. Confirm exposure duration, weather conditions and required protection when requesting a quotation."
+        },
+        {
+          "question": "Which buckle should I use with the strap?",
+          "answer": "Choose a buckle compatible with the strap width and lashing method. Wire buckles are commonly paired with composite cord strapping."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-hotmelt-strapping",
+      "name": "Hotmelt Strapping",
+      "slug": "hotmelt-strapping",
+      "seoTitle": "Hotmelt Polyester Strapping 9-19 mm | FOCUSOURCE",
+      "seoDescription": "Explore white hotmelt polyester strapping in 9, 13, 16 and 19 mm widths for bundling and pallet packaging. Contact FOCUSOURCE for other sizes and specifications.",
+      "intro": "Hotmelt strapping uses parallel polyester yarns bonded with hot-melt adhesive to form a flexible strap for bundling and pallet packaging. Available widths include 9 mm, 13 mm, 16 mm and 19 mm; contact us about other widths and application requirements.",
+      "applications": [
+        "Palletized cartons and packaged goods",
+        "Timber and building-material bundles",
+        "Warehouse bundling and export packaging"
+      ],
+      "benefits": [
+        "Flexible bonded polyester yarn construction",
+        "9 mm, 13 mm, 16 mm and 19 mm widths available",
+        "Other sizes and packing details available on request"
+      ],
+      "faqs": [
+        {
+          "question": "Which widths are available?",
+          "answer": "Available widths include 9 mm, 13 mm, 16 mm and 19 mm. Contact us for other widths."
+        },
+        {
+          "question": "How does hotmelt strapping differ from composite strapping?",
+          "answer": "Hotmelt strapping bonds parallel polyester yarns with hot-melt adhesive. Composite strapping encloses polyester yarns in a protective polymer coating. Choose the construction for your cargo and handling conditions."
+        },
+        {
+          "question": "How do I request a quotation?",
+          "answer": "Provide the strap width, required breaking strength, roll length, order quantity and intended application. Confirm buckle and tool compatibility for your selected strap."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-woven-lashing",
+      "name": "Woven Lashing",
+      "slug": "woven-lashing",
+      "seoTitle": "Woven Polyester Lashing for Heavy Cargo | FOCUSOURCE",
+      "seoDescription": "Find woven polyester lashing for machinery, steel and export cargo. Review 32-50 mm product specifications and packing options.",
+      "intro": "Woven polyester lashing is a flexible restraint material for heavy and irregular cargo. Its woven construction helps distribute load contact while retaining the handling advantages of textile lashing.",
+      "applications": [
+        "Machinery and industrial equipment",
+        "Steel products, lumber and building materials",
+        "Export cargo and container lashing"
+      ],
+      "benefits": [
+        "Flexible textile construction for varied load shapes",
+        "Multiple widths and system-strength choices",
+        "Roll or bag packing options by specification"
+      ],
+      "faqs": [
+        {
+          "question": "What widths are available?",
+          "answer": "The current range includes 32 mm, 40 mm and 50 mm options. Refer to each product specification for breaking strength and packing."
+        },
+        {
+          "question": "Can woven lashing be reused?",
+          "answer": "Reuse depends on the lashing method, condition and applicable cargo-securing rules. Inspect for cuts, abrasion, contamination or damaged stitching before every use."
+        },
+        {
+          "question": "What information is needed for a quote?",
+          "answer": "Provide cargo weight and dimensions, lashing arrangement, required length, destination and target delivery date."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-wire-buckles",
+      "name": "Wire Buckles",
+      "slug": "wire-buckles",
+      "seoTitle": "Wire Buckles for Composite Strapping | FOCUSOURCE",
+      "seoDescription": "Compare wire buckle sizes, wire diameters and box packing for composite strapping. Request factory-direct supply from FOCUSOURCE.",
+      "intro": "Wire buckles form a friction joint with compatible composite cord strapping. Select the buckle by strap width, required joint performance and application method.",
+      "applications": [
+        "Pallet strapping",
+        "Steel, timber and pipe bundles",
+        "Export packaging and cargo restraint"
+      ],
+      "benefits": [
+        "Self-locking friction-joint design",
+        "Multiple wire diameters and package quantities",
+        "Surface treatments available by specification"
+      ],
+      "faqs": [
+        {
+          "question": "How do I match a wire buckle to my strap?",
+          "answer": "Match the buckle size to strap width and follow the recommended threading and tensioning procedure for the selected system."
+        },
+        {
+          "question": "What surface treatments are available?",
+          "answer": "Electroplated and phosphated finishes are listed for this range. Confirm the required finish and corrosion conditions when ordering."
+        },
+        {
+          "question": "How are wire buckles packed?",
+          "answer": "Packing quantity and carton dimensions vary by model. Check the technical specification table for model-level details."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-lashing-buckles",
+      "name": "Lashing Buckles",
+      "slug": "lashing-buckles",
+      "seoTitle": "Steel Lashing Buckles for Woven Lashing | FOCUSOURCE",
+      "seoDescription": "Source 30-50 mm steel lashing buckles for woven polyester lashing. Compare model, packing and finish specifications.",
+      "intro": "Lashing buckles connect compatible woven polyester lashing systems for cargo restraint. Choose a model based on lashing width, joint design and the securing method used on the load.",
+      "applications": [
+        "Machinery and equipment restraint",
+        "Steel and timber bundles",
+        "Export cargo lashing"
+      ],
+      "benefits": [
+        "Models for 30 mm, 40 mm and 50 mm lashing",
+        "Steel buckle construction",
+        "Compact box packing for supply and storage"
+      ],
+      "faqs": [
+        {
+          "question": "Which buckle width should I order?",
+          "answer": "Select the buckle width to match the woven lashing width. Confirm compatibility with your tensioning method before ordering."
+        },
+        {
+          "question": "Are buckle color options available?",
+          "answer": "The current specification lists silver and yellow. Confirm available finish and quantity with the sales team."
+        },
+        {
+          "question": "Can these buckles secure machinery?",
+          "answer": "They are intended for compatible woven lashing systems. The full restraint design should account for cargo weight, movement and lashing points."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-tools",
+      "name": "Tools",
+      "slug": "strapping-tools",
+      "seoTitle": "Strapping Tools, Tensioners & Heat Sealers | FOCUSOURCE",
+      "seoDescription": "Explore manual strapping tools, a heavy duty ratchet tensioner for 50 mm straps and the FKR400 heat sealer with a 400 mm sealing length. Request model details.",
+      "intro": "Explore tensioners and cutters for strapping, plus heat sealers for compatible packaging materials. The range includes a heavy duty ratchet tensioner for 50 mm straps and the FKR400 heat sealer with a 400 mm sealing length. Select each tool for the material and packaging task.",
+      "applications": [
+        "Warehouse and pallet packing",
+        "Field lashing and export preparation",
+        "Steel, timber and machinery bundling"
+      ],
+      "benefits": [
+        "Portable equipment for on-site use",
+        "Tensioning, cutting or heat sealing according to model",
+        "Model-specific strap widths and sealing lengths"
+      ],
+      "faqs": [
+        {
+          "question": "Which strap widths do the tools support?",
+          "answer": "The strapping tool range covers 13 mm to 50 mm, including a heavy duty ratchet tensioner for 50 mm straps. The FKR400 heat sealer has a separate 400 mm sealing length; this is not a strap width. Confirm the selected model before purchase."
+        },
+        {
+          "question": "Do I need separate tensioning and cutting tools?",
+          "answer": "Tool configuration depends on the strap and joint method. Share your current process and strap type for a compatible recommendation."
+        },
+        {
+          "question": "Are the tools suitable for field work?",
+          "answer": "Manual tools are portable and can be used where compatible strapping is applied. Follow operating and safety instructions."
+        },
+        {
+          "question": "What does the FKR400 heat sealer support?",
+          "answer": "The FKR400 provides a 400 mm sealing length for compatible heat-sealable packaging. Confirm your material type, thickness and power supply requirements before ordering."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-dispenser",
+      "name": "Dispenser",
+      "slug": "strapping-dispenser",
+      "seoTitle": "Mobile Strapping Dispenser Trolley | FOCUSOURCE",
+      "seoDescription": "Mobile dispenser trolley for composite strapping and woven lashing rolls, with 200 mm and 400 mm core options and tool storage tray.",
+      "intro": "A mobile strapping dispenser keeps coils organized at the packing station and makes material easier to move and dispense. Confirm roll dimensions and core compatibility before ordering.",
+      "applications": [
+        "Packing lines and warehouse workstations",
+        "Mobile cargo-securing jobs",
+        "Storage of strap rolls, buckles and hand tools"
+      ],
+      "benefits": [
+        "Mobile trolley format",
+        "Core options listed for 200 mm and 400 mm",
+        "Tray for buckles and hand tools"
+      ],
+      "faqs": [
+        {
+          "question": "Which coil cores are supported?",
+          "answer": "The product information lists 200 mm and 400 mm core sizes. Confirm the roll's inner diameter and dimensions before ordering."
+        },
+        {
+          "question": "Can the trolley hold buckles and tools?",
+          "answer": "The design includes a tray intended for buckles and hand tools. Confirm load capacity and dimensions for your setup."
+        },
+        {
+          "question": "Is the dispenser supplied with strapping?",
+          "answer": "The dispenser is listed as equipment. Contact us to confirm whether strapping or accessories are included in a specific quotation."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-vmpet",
+      "name": "Vacuum Metallized Polyester Film",
+      "slug": "vacuum-metallized-polyester-film",
+      "seoTitle": "Vacuum Metallized Polyester Film VMPET | FOCUSOURCE",
+      "seoDescription": "Explore reflective VMPET laminated woven polyester film V-4110. Review its 120-micron construction, roll dimensions and technical data.",
+      "intro": "The V-4110 vacuum metallized polyester film is a reflective laminated roll material combining VMPET, PE and woven polyester layers. Review the listed technical properties and confirm application requirements with the supplier.",
+      "applications": [
+        "Protective packaging and covering",
+        "Industrial wrap and barrier-layer applications",
+        "Projects requiring a reflective laminated surface"
+      ],
+      "benefits": [
+        "VMPET + PE + PE woven + PE layer structure",
+        "120 micron thickness and 2 m x 100 m rolls",
+        "Technical data available for project review"
+      ],
+      "faqs": [
+        {
+          "question": "What is the V-4110 film structure?",
+          "answer": "The supplied specification lists VMPET + PE + PE WOVEN + PE. Confirm layer construction for the final purchase specification."
+        },
+        {
+          "question": "What are the roll dimensions?",
+          "answer": "The listed size is 2 m x 100 m per roll, with a net weight of 22 kg per roll."
+        },
+        {
+          "question": "Can I use the listed permeability figures for design?",
+          "answer": "The source specification's permeability units need supplier confirmation before engineering use. Request the test method and complete unit definition."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "c-applications",
+      "name": "Applications",
+      "slug": "load-securing-applications",
+      "seoTitle": "Industrial Load Securing Applications | FOCUSOURCE",
+      "seoDescription": "Explore polyester strapping and lashing approaches for pallets, containers, steel and building materials in export logistics.",
+      "intro": "Choose a load-securing approach around cargo geometry, weight, handling and transport conditions. FOCUSOURCE products support pallet, container, steel and building-material applications.",
+      "applications": [
+        "Palletized cartons, drums and irregular loads",
+        "Containerized export cargo",
+        "Steel sections and building materials"
+      ],
+      "benefits": [
+        "Match strap, buckle and tools to cargo requirements",
+        "Flexible textile strapping for varied load shapes",
+        "Application-focused product recommendations"
+      ],
+      "faqs": [
+        {
+          "question": "What cargo information should I provide?",
+          "answer": "Share cargo weight and dimensions, package type, transport mode, lashing points and any required restraint standard."
+        },
+        {
+          "question": "Can one strapping system cover every load?",
+          "answer": "No. System selection depends on the cargo, transport movement, contact surfaces and securing method. Evaluate each application."
+        },
+        {
+          "question": "Can you recommend a lashing configuration?",
+          "answer": "We can review your cargo details and recommend compatible products. Final securing design should follow applicable regulations and site procedures."
+        }
+      ],
+      "active": true,
+      "contentType": "application"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": "Composite Cord Strapping",
+      "category": "Composite Strapping",
+      "description": "Polyester corded strap with a protective polymer coating, high retained tension and excellent shock absorption.",
+      "seoTitle": "Composite Strap & Cord Strapping, 13–32 mm | FOCUSOURCE",
+      "seoDescription": "Compare composite strap in flat and twisted polyester yarn constructions. View 13–32 mm specifications, matched wire buckles and system-test videos. Request a quote.",
+      "image": "/assets/strapping/photos/white-composite-strap-coils.webp",
+      "imageAlt": "White composite cord strapping rolls wound on cardboard cores.",
+      "moq": "20 cartons",
+      "leadTime": "10-15 days",
+      "materials": "High-tenacity polyester",
+      "specificationTable": "Item Code|Width|Thickness|Type of Yarn|Min. Linear Breaking Strength|Min. System Breaking Strength|M/Coil|Coils/Box\nCS40|13mm|0.85±0.05mm|Flat Yarn|300 daN|480 daN|1100m|2 Coils/Box\nCS50|16mm|0.85±0.05mm|Flat Yarn|425 daN|680 daN|850m|2 Coils/Box\nCS60|19mm|0.9±0.1mm|Flat Yarn|475 daN|760 daN|600m|2 Coils/Box\nCS65|19mm|0.9±0.1mm|Flat Yarn|625 daN|1000 daN|500m|2 Coils/Box\nCS85|25mm|1.0±0.1mm|Flat Yarn|785 daN|1256 daN|500m|2 Coils/Box\nCS105|32mm|1.1±0.1mm|Flat Yarn|1500 daN|2400 daN|230m|2 Coils/Box\nCS89|25mm|1.3±0.1mm|Twisted Yarn|925 daN|1480 daN|400m|2 Coils/Box\nCS106|32mm|1.3±0.1mm|Twisted Yarn|1625 daN|2600 daN|230m|2 Coils/Box",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p11",
+      "name": "Hotmelt Strapping",
+      "slug": "hotmelt-strapping",
+      "category": "Hotmelt Strapping",
+      "description": "White hotmelt polyester strapping made from parallel yarns bonded with hot-melt adhesive. Flexible strapping for bundling, pallet packaging and warehouse handling. Available widths include 9 mm, 13 mm, 16 mm and 19 mm; other widths are available on request.",
+      "seoTitle": "Hotmelt Polyester Strap & Strapping | FOCUSOURCE",
+      "seoDescription": "Explore hotmelt polyester strap in 9, 13, 16 and 19 mm widths. Compare bonded yarn construction, application requirements and compatible buckle options.",
+      "image": "/assets/strapping/photos/hotmelt-strapping-white-rolls.webp",
+      "imageAlt": "White hotmelt polyester strapping rolls with clearly visible parallel fibre strands stacked in a warehouse.",
+      "moq": "50 Rolls",
+      "leadTime": "7 - 15 days",
+      "materials": "Polyester yarns bonded with hot-melt adhesive",
+      "specificationTable": "Specification|Available options\nStrap widths|9 mm, 13 mm, 16 mm, 19 mm\nOther widths|Contact us\nColour|White\nConstruction|Hotmelt-bonded polyester yarns\nBreaking strength and roll length|Confirm selected specification when requesting a quote",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p7",
+      "name": "Woven Lashing",
+      "category": "Woven Lashing",
+      "description": "High-strength woven polyester lashing for securing heavy cargo, machinery, steel products and export loads. Soft, flexible and resistant to shock during transport.",
+      "seoTitle": "Woven Polyester Lashing 32, 40 & 50 mm | FOCUSOURCE",
+      "seoDescription": "Explore orange woven polyester lashing, weave details, 32, 40 and 50 mm specifications and real cargo applications. Request compatible buckles and a quote.",
+      "image": "/assets/products/orange-woven-lashing-roll.webp",
+      "imageAlt": "Orange woven polyester lashing wound in a flat roll on a white background",
+      "moq": "20 cartons",
+      "leadTime": "10-15 days",
+      "materials": "High-tenacity woven polyester",
+      "specificationTable": "Item Code|Width|Thickness|Type of Yarn|Min. Linear Breaking Strength|Min. System Breaking Strength|Packing\nLash105|32mm|\\|Polyester yarn|2000 daN|3400 daN|125m/roll; 250m/bag\nLash200|40mm|\\|Polyester yarn|4000 daN|8000 daN|100m/roll; 200m/bag\nLash500|50mm|\\|Polyester yarn|4000 daN|8000 daN|100m/roll; 200m/bag",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p2",
+      "name": "Wire Buckles",
+      "category": "Wire Buckles",
+      "description": "Self-locking buckles engineered for strong joint efficiency and reliable re-tensioning in transit.\nSurface treatment: electroplating or phosphating",
+      "seoTitle": "Wire Buckles for 13–32 mm Composite Strapping | FOCUSOURCE",
+      "seoDescription": "Compare wire buckle specifications and confirmed CS40 / WB13 through CS105 / WB32 strap pairings. Ask FOCUSOURCE for finish, packing and compatibility.",
+      "image": "/assets/products/wire-buckles-range.webp",
+      "imageAlt": "Range of steel wire strapping buckles in different sizes on a light background",
+      "moq": "20 cartons",
+      "leadTime": "10-15 days",
+      "materials": "steel wire",
+      "specificationTable": "Item Code|Wire Dia|Package|G.W/Box|Box Size\nWB1333|3.3mm|1000 PCS/Box|9.3 kg|35×26×10.5cm\nWB1635|3.5mm|1000 PCS/Box|13.4 kg|35×26×12.5cm\nWB1940|4.0mm|1000 PCS/Box|18.4 kg|35×26×17.5cm\nWB1943|4.3mm|1000 PCS/Box|21.0 kg|35×26×17.5cm\nWB2550|5.0mm|500 PCS/Box|17.4 kg|35×26×16cm\nWB2560|6.0mm|500 PCS/Box|26.0 kg|35×26×20.5cm\nWB3260|6.0mm|250 PCS/Box|15.0 kg|35×26×16cm\nWB3270|7.0mm|250 PCS/Box|22.0 kg|35×26×19.5cm",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p8",
+      "name": "Lashing Buckles",
+      "category": "Lashing Buckles",
+      "description": "Heavy-duty metal lashing buckles for woven polyester lashing systems. Designed for strong load retention on machinery, steel, timber and export cargo.",
+      "seoTitle": "Lashing Buckles for Woven Polyester Strap | FOCUSOURCE",
+      "seoDescription": "Explore steel lashing buckles for woven polyester strap. Compare available models and confirm width, tensioning method, packing and order requirements.",
+      "image": "/assets/strapping/photos/lashing-buckles.jpg",
+      "imageAlt": "Four rectangular three-slot steel lashing buckles with silver and gold finishes.",
+      "moq": "10 boxes",
+      "leadTime": "10-15 days",
+      "materials": "Zinc-plated steel",
+      "specificationTable": "Item Code|Width|Package|N.W/PC|Color\nFB3030|30mm|100 PCS/Box|200G|Silver/Yellow\nFB4040|40mm|50 PCS/Box|260G|Silver/Yellow\nFB5050|50mm|50 PCS/Box|380G|Silver/Yellow",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p3",
+      "name": "Manual Tensioning Tools",
+      "category": "Tools",
+      "description": "Manual strapping tensioners: green T19 for 19 mm, red T25 for 25 mm, orange T32 for 32 mm and blue T50 for 50 mm strap. Confirm strap thickness and construction compatibility when ordering.",
+      "seoTitle": "Strapping Tensioners T19, T25, T32 & T50 | FOCUSOURCE",
+      "seoDescription": "Choose green T19 (19 mm), red T25 (25 mm), orange T32 (32 mm) or blue T50 (50 mm) manual strapping tensioners. View specifications and request a quote.",
+      "image": "/assets/products/manual-tensioners-t19-t25-t32-t50.webp",
+      "imageAlt": "Manual strapping tensioners: blue T50 for 50 mm, orange T32 for 32 mm, red T25 for 25 mm and green T19 for 19 mm",
+      "moq": "10 sets",
+      "leadTime": "7-12 days",
+      "materials": "Hardened steel / alloy",
+      "specificationTable": "Model|Applicable strap width|Colour\nT19|19 mm|Green\nT25|25 mm|Red\nT32|32 mm|Orange\nT50|50 mm|Blue",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p12",
+      "name": "Heavy Duty Ratchet Tensioner",
+      "slug": "heavy-duty-ratchet-tensioner-50mm",
+      "category": "Tools",
+      "description": "Heavy duty manual ratchet tensioner for 50 mm strapping and lashing applications. Its lever-operated ratchet mechanism provides controlled tensioning. Confirm compatibility with your strap construction and securing method before ordering.",
+      "seoTitle": "Heavy Duty Ratchet Tensioner 50 mm | FOCUSOURCE",
+      "seoDescription": "Heavy duty ratchet tensioner for 50 mm strapping and lashing. Explore product details and request compatibility guidance for your cargo securing application.",
+      "image": "/assets/strapping/photos/heavy-duty-ratchet-tensioner-50mm.webp",
+      "imageAlt": "Heavy duty metal ratchet tensioner with a long lever and black grip for 50 mm straps, shown on a white background.",
+      "moq": "1 Pc",
+      "leadTime": "10 days",
+      "materials": "Metal body with grip handle",
+      "specificationTable": "Specification|Value\nProduct|Heavy Duty Ratchet Tensioner\nStrap width|50 mm\nOperation|Manual ratchet mechanism\nStrap compatibility|Confirm selected strap and securing method",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p13",
+      "name": "Heat Sealer FKR400",
+      "slug": "heat-sealer-fkr400-400mm",
+      "category": "Tools",
+      "description": "FKR400 handheld heat sealer with a 400 mm sealing length for compatible heat-sealable packaging materials. The clamp-style jaws and blue handles support manual positioning during sealing. Contact us to confirm material thickness, operating settings and power supply requirements.",
+      "seoTitle": "FKR400 Heat Sealer 400 mm | FOCUSOURCE",
+      "seoDescription": "FKR400 handheld heat sealer with a 400 mm sealing length. View the product and confirm packaging material compatibility and electrical requirements with FOCUSOURCE.",
+      "image": "/assets/strapping/photos/heat-sealer-fkr400-400mm.webp",
+      "imageAlt": "FKR400 handheld heat sealer with blue handles, long sealing jaws, a control dial and a black power cable on a white background.",
+      "moq": "1 Pc",
+      "leadTime": "10 days",
+      "materials": "Steel + Plastic",
+      "specificationTable": "Specification|Value\nModel|FKR400\nSealing length|400 mm\nType|Handheld heat sealer\nCompatible material and thickness|Confirm before ordering\nVoltage and power|Confirm selected electrical specification",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p9",
+      "name": "Mobile Strapping Dispenser",
+      "category": "Dispenser",
+      "description": "Mobile dispenser trolley for composite cord strapping and woven lashing coils. Keeps strapping organized and easy to dispense while providing a tray for buckles and hand tools.\nCore size: 200mm and 400mm",
+      "seoTitle": "Mobile Strapping Dispenser Trolley | FOCUSOURCE",
+      "seoDescription": "Mobile dispenser trolley for composite strapping and woven lashing coils. Supports 200 mm and 400 mm cores with a convenient buckle and tool tray.",
+      "image": "/assets/strapping/photos/strapping-dispenser.jpg",
+      "imageAlt": "Black wheeled strapping dispenser with a yellow strap roll and upper tool tray.",
+      "moq": "5 units",
+      "leadTime": "10-15 days",
+      "materials": "Powder-coated steel",
+      "specificationTable": "",
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": "p10",
+      "name": "Vacuum Metallized Polyester Film",
+      "category": "Vacuum Metallized Polyester Film",
+      "description": "Reflective VMPET laminated film supplied in roll form. The V-4110 construction combines VMPET, PE and a woven polyethylene reinforcing layer for packaging and protective covering applications.",
+      "seoTitle": "Vacuum Metallized Polyester Film VMPET | FOCUSOURCE",
+      "seoDescription": "V-4110 vacuum metallized polyester film with VMPET, PE and a woven polyethylene reinforcing layer. Reflective 120-micron roll material for packaging and protective covering.",
+      "image": "/assets/strapping/photos/vacuum-metallized-polyester-film.jpg",
+      "imageAlt": "Reflective silver VMPET laminate roll with a visible woven texture.",
+      "moq": "By specification",
+      "leadTime": "10-15 days",
+      "materials": "VMPET + PE + PE woven + PE",
+      "specificationTable": "Specification|Value\nProduct name|VMPET + PE + PE woven + PE\nItem code|V-4110\nStructure|VMPET + PE + PE woven + PE\nDensity|110 g/m²\nThickness|120 µm\nRoll size|2 m × 100 m per roll\nTensile strength (MD)|250 N/25 mm\nTensile strength (TD)|180 N/25 mm\nTear strength|450 N\nThermal conductivity|0.08 W/(m·K)\nWater vapour permeability|2.00 ng/NS\nWater absorption by volume|1.00 g/m²\nUV resistance|Excellent\nOperating temperature range (without adhesive)|−20 to 80 °C\nNet weight|22 kg/roll\nPacking|Roll + pallet",
+      "featured": false,
+      "active": true
+    }
+  ],
+  "posts": [
+    {
+      "id": "b-custom-printing",
+      "title": "Custom Printed Strapping: Add Your Logo and Company Name",
+      "category": "Customization",
+      "date": "2026-10-20",
+      "image": "/assets/strapping/photos/custom-printed-polyester-strapping.webp",
+      "excerpt": "Personalize polyester strapping with your company name, logo or identification text. Custom printing helps make your packaging recognizable during handling and delivery. Send us your artwork, strap width and required quantity to confirm printing options."
+    },
+    {
+      "id": "b-custom-colours",
+      "title": "Custom Strapping Colours: Red, Green, Yellow, Black and More",
+      "category": "Customization",
+      "date": "2026-10-20",
+      "image": "/assets/strapping/photos/custom-colour-polyester-strapping.webp",
+      "excerpt": "Match your packaging to your brand or use colours to distinguish shipments and product groups. Polyester strapping can be supplied in red, green, yellow, black and other colours. The photo shows yellow rolls; contact us with your preferred colour, width and order quantity."
+    },
+    {
+      "id": "b1",
+      "title": "How to select composite strapping for steel pipe bundles",
+      "category": "Application",
+      "date": "2026-09-28",
+      "image": "/assets/strapping/photos/steel-pipe-load-securing.webp",
+      "excerpt": "Compare strap width, system strength, buckle size and retained tension for round metal loads."
+    },
+    {
+      "id": "b2",
+      "title": "Choosing a wire buckle for composite strapping",
+      "category": "Product guide",
+      "date": "2026-09-12",
+      "image": "/assets/strapping/photos/strap-and-wire-buckle-detail.webp",
+      "excerpt": "Match strap width, buckle size and threading method for a dependable load securing system."
+    },
+    {
+      "id": "b3",
+      "title": "Securing machinery crates without damaging the load",
+      "category": "Application",
+      "date": "2026-08-26",
+      "image": "/assets/strapping/photos/machinery-export-strapping.webp",
+      "excerpt": "Why flexible polyester cord strapping is effective for heavy, irregular and sensitive cargo."
+    }
+  ],
+  "applications": [
+    {
+      "id": "p4",
+      "name": "Pallet Load Securing",
+      "category": "Applications",
+      "description": "Flexible strapping systems for cartons, drums and irregular pallet loads exposed to movement and vibration.",
+      "seoTitle": "Composite Strapping for Pallet Load Securing | FOCUSOURCE",
+      "seoDescription": "Composite strapping systems for cartons, drums and irregular pallet loads. Maintain secure tension while absorbing shock and vibration during transport.",
+      "image": "/uploads/Pallet-Load-Securing-image-c2f10bd1-5edb-48f9-9678-ba48a9db1f8c.png",
+      "imageAlt": "Cardboard cartons secured with white strapping, wire buckles and edge protectors.",
+      "moq": "By specification",
+      "leadTime": "10-15 days",
+      "materials": "Composite strap / buckles",
+      "featured": false,
+      "active": true,
+      "contentType": "application"
+    },
+    {
+      "id": "p5",
+      "name": "Container Load Lashing",
+      "category": "Applications",
+      "description": "High-strength cord strapping and lashing configurations for export cargo and container movement.",
+      "seoTitle": "Container Load Lashing and Cargo Securing | FOCUSOURCE",
+      "seoDescription": "High-strength polyester cord strapping and woven lashing systems for securing export cargo against movement and shock inside shipping containers.",
+      "image": "/assets/strapping/photos/container-cargo-lashing.webp",
+      "imageAlt": "Cargo secured inside an open shipping container with crossed white lashing straps.",
+      "moq": "By specification",
+      "leadTime": "10-18 days",
+      "materials": "Heavy-duty polyester cord",
+      "featured": false,
+      "contentType": "application"
+    },
+    {
+      "id": "p6",
+      "name": "Steel & Building Materials",
+      "category": "Applications",
+      "description": "Flexible composite strapping for steel sections, structural components and long building material bundles.",
+      "seoTitle": "Composite Strapping for Steel and Building Materials",
+      "seoDescription": "Flexible high-strength composite strapping for steel sections, pipes, structural components and long building material bundles during handling and transport.",
+      "image": "/assets/strapping/photos/steel-bundle-strapping.webp",
+      "imageAlt": "Yellow metal profiles bundled with white strapping and supported on wooden spacers.",
+      "moq": "By specification",
+      "leadTime": "10-15 days",
+      "materials": "Heavy-duty composite strap",
+      "featured": false,
+      "contentType": "application"
+    }
+  ]
+}

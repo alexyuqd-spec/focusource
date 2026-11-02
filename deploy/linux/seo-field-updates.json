@@ -1,0 +1,84 @@
+[
+  {
+    "section": "settings",
+    "field": "seoTitle",
+    "before": "Composite Strapping & Wire Buckles | FOCUSOURCE",
+    "after": "Composite Strapping Manufacturer & Wire Buckles | FOCUSOURCE"
+  },
+  {
+    "section": "settings",
+    "field": "seoDescription",
+    "before": "Composite strapping, Wire buckles,Lashing buckles and manual tensioning tools for pallets, lumber, steel pipes and machinery. Factory-direct supply and global delivery.",
+    "after": "Composite strap and strapping systems with matched wire buckles and manual tensioners. Compare 13–32 mm specifications and request a quote from FOCUSOURCE."
+  },
+  {
+    "section": "products",
+    "id": "p1",
+    "field": "seoTitle",
+    "before": "Composite Cord Strapping Manufacturer | FOCUSOURCE",
+    "after": "Composite Strap & Cord Strapping, 13–32 mm | FOCUSOURCE"
+  },
+  {
+    "section": "products",
+    "id": "p1",
+    "field": "seoDescription",
+    "before": "Buy high-strength composite cord strapping for pallets, steel and machinery. Factory-direct polyester strapping in 13-32 mm widths with global delivery.",
+    "after": "Compare composite strap in flat and twisted polyester yarn constructions. View 13–32 mm specifications, matched wire buckles and system-test videos. Request a quote."
+  },
+  {
+    "section": "products",
+    "id": "p2",
+    "field": "seoTitle",
+    "before": "Wire Buckles for Composite Strapping | FOCUSOURCE",
+    "after": "Wire Buckles for Composite Strap & Strapping | FOCUSOURCE"
+  },
+  {
+    "section": "products",
+    "id": "p2",
+    "field": "seoDescription",
+    "before": "Galvanized wire buckles for 13-32 mm composite strapping. Self-locking design supports strong joints, re-tensioning and reliable cargo securing.",
+    "after": "Match wire buckles to composite strap widths. See threading photographs, product specifications and confirmed WB16, WB19, WB25 and WB32 pairings."
+  },
+  {
+    "section": "products",
+    "id": "p11",
+    "field": "seoTitle",
+    "before": "Hotmelt Polyester Strapping 9-19 mm | FOCUSOURCE",
+    "after": "Hotmelt Polyester Strap & Strapping | FOCUSOURCE"
+  },
+  {
+    "section": "products",
+    "id": "p11",
+    "field": "seoDescription",
+    "before": "White hotmelt polyester strapping in 9, 13, 16 and 19 mm widths for bundling and pallet packaging. Ask FOCUSOURCE about other widths and roll specifications.",
+    "after": "Explore hotmelt polyester strap in 9, 13, 16 and 19 mm widths. Compare bonded yarn construction, application requirements and compatible buckle options."
+  },
+  {
+    "section": "products",
+    "id": "p7",
+    "field": "seoTitle",
+    "before": "Woven Polyester Lashing for Heavy Cargo | FOCUSOURCE",
+    "after": "Woven Polyester Lashing Strap | FOCUSOURCE"
+  },
+  {
+    "section": "products",
+    "id": "p7",
+    "field": "seoDescription",
+    "before": "High-strength woven polyester lashing for machinery, steel and export cargo. Available in 32-50 mm widths with system strength up to 8000 daN.",
+    "after": "Compare woven polyester lashing strap models, widths, system strength and packing options for export cargo. Request compatible buckles and tensioning tools."
+  },
+  {
+    "section": "products",
+    "id": "p8",
+    "field": "seoTitle",
+    "before": "Heavy Duty Lashing Buckles 30-50 mm | FOCUSOURCE",
+    "after": "Lashing Buckles for Woven Polyester Strap | FOCUSOURCE"
+  },
+  {
+    "section": "products",
+    "id": "p8",
+    "field": "seoDescription",
+    "before": "Heavy-duty steel lashing buckles for 30-50 mm woven polyester lashing. Built for machinery, timber, steel products and export cargo restraint.",
+    "after": "Explore steel lashing buckles for woven polyester strap. Compare available models and confirm width, tensioning method, packing and order requirements."
+  }
+]

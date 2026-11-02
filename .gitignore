@@ -1,0 +1,46 @@
+# Local Git helper config used by the Codex runtime
+.gitconfig-codex
+
+# Temporary working files and design explorations
+tmp/
+design/
+
+# Generated deployment archives and staging directories
+release/
+*.tar.gz
+
+# Local runtime files
+node_modules/
+npm-debug.log*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# Recoverable media trash created by the admin
+data/media-trash/
+data/site-before-*.json
+data/*.tmp
+
+# Local progress notes
+HOME-PROGRESS.md
+
+# Local research / outreach artifacts (do not publish)
+outputs/
+output/leads/
+output/pdf/
+tests/
+
+# Large media omitted from the slim source tree
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mkv
+*.m4v
+public/assets/strapping/videos/*
+public/downloads/*.pdf
+public/downloads/*.zip

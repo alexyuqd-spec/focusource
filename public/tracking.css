@@ -1,0 +1,9 @@
+.form-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.product-card > a.product-image { display: block; }
+.analytics-choice { position: fixed; bottom: 20px; left: 20px; z-index: 1000; width: min(420px, calc(100vw - 40px)); padding: 20px; border: 1px solid #d5ded8; border-radius: 12px; background: #fff; color: #17382d; box-shadow: 0 8px 32px #0002; font: 14px/1.5 system-ui, sans-serif; }
+.analytics-choice[hidden] { display: none; }
+.analytics-choice p { margin: 0 0 14px; }
+.analytics-choice div { display: flex; flex-wrap: wrap; gap: 10px; }
+.analytics-choice button { border: 1px solid #17382d; border-radius: 6px; background: #17382d; color: #fff; padding: 10px 14px; cursor: pointer; font: inherit; }
+.analytics-choice [data-decline] { background: #fff; color: #17382d; }
+.analytics-preferences { display: block; margin: 12px auto; padding: 6px 10px; border: 0; background: transparent; color: #17382d; font: 12px system-ui, sans-serif; text-decoration: underline; cursor: pointer; }

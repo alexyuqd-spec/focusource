@@ -1,0 +1,24 @@
+[Unit]
+Description=FOCUSOURCE packaging website
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/focusource
+EnvironmentFile=/etc/focusource.env
+Environment=NODE_ENV=production
+Environment=TRUST_PROXY=1
+ExecStart=/usr/bin/node /var/www/focusource/server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/focusource/data /var/www/focusource/public
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

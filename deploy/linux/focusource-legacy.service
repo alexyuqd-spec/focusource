@@ -1,0 +1,23 @@
+[Unit]
+Description=FOCUSOURCE packaging website (systemd 219 compatible)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/focusource
+EnvironmentFile=/etc/focusource.env
+Environment=NODE_ENV=production
+Environment=TRUST_PROXY=1
+ExecStart=/usr/bin/node /var/www/focusource/server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

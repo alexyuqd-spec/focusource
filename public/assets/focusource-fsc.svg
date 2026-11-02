@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216" height="216" viewBox="0 0 216 216" fill="none">
+  <title>FOCUSOURCE threaded composite fiber strap logo</title>
+  <path d="M166 42H60C39 42 29 53 29 74V142C29 163 39 174 60 174H166" stroke="#17382D" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M29 111H73" stroke="#17382D" stroke-width="20"/>
+  <path d="M55 72H129C143 72 150 80 150 92C150 104 143 112 129 112H91C78 112 71 120 71 132C71 144 78 151 91 151H139" stroke="#6F7A69" stroke-width="31" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M55 72H129C143 72 150 80 150 92C150 104 143 112 129 112H91C78 112 71 120 71 132C71 144 78 151 91 151H139" stroke="#F4F4EE" stroke-width="25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <g stroke="#AEB2AA" stroke-width="1.25" opacity=".95">
+    <path d="M55 65H129C143 65 150 73 150 85C150 97 143 105 129 105H91C78 105 71 113 71 125C71 137 78 144 91 144H139"/>
+    <path d="M55 68.5H129C143 68.5 150 76.5 150 88.5C150 100.5 143 108.5 129 108.5H91C78 108.5 71 116.5 71 128.5C71 140.5 78 147.5 91 147.5H139"/>
+    <path d="M55 72H129C143 72 150 80 150 92C150 104 143 112 129 112H91C78 112 71 120 71 132C71 144 78 151 91 151H139"/>
+    <path d="M55 75.5H129C143 75.5 150 83.5 150 95.5C150 107.5 143 115.5 129 115.5H91C78 115.5 71 123.5 71 135.5C71 147.5 78 154.5 91 154.5H139"/>
+    <path d="M55 79H129C143 79 150 87 150 99C150 111 143 119 129 119H91C78 119 71 127 71 139C71 151 78 158 91 158H139"/>
+  </g>
+  <path d="M57 63H128M57 81H128M93 103H128M93 121H128M93 142H137M93 160H137" stroke="#FFFFFF" stroke-width="1" opacity=".82"/>
+  <path d="M166 34V82M166 102V178" stroke="#17382D" stroke-width="12"/>
+  <path d="M151 54H166M151 163H166" stroke="#17382D" stroke-width="12"/>
+</svg>

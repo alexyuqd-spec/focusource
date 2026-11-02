@@ -1,0 +1,13 @@
+{
+  "name": "packcraft-export-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SEO-ready export packaging website with a lightweight content admin.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=16.20.2"
+  }
+}

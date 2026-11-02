@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="96" viewBox="0 0 176 96" fill="none">
+  <title>FOCUSOURCE FSC fiber strapping and wire buckle monogram</title>
+  <desc>F and S are formed from tensioned fiber strapping; C is formed from a steel wire buckle.</desc>
+  <rect x="4" y="4" width="168" height="88" rx="20" fill="#17382D"/>
+
+  <!-- F: wide woven fiber strap -->
+  <path d="M25 75V21H70M25 47H60" stroke="#F7F8F2" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M21.8 73V25M29 73V25M29 25H67M29 43H57"
+        stroke="#C7CEC8" stroke-width="1.2" stroke-linecap="round" opacity=".55"/>
+
+  <!-- C: open phosphated-steel wire buckle, positioned behind the threaded strap -->
+  <path d="M151 21H134C122 21 116 27 116 39V57C116 69 122 75 134 75H151"
+        stroke="#F7F8F2" stroke-width="7" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M151 25H135C126 25 121 30 121 39V57C121 66 126 71 135 71H151"
+        stroke="#87938D" stroke-width="1.6" stroke-linecap="square" opacity=".9"/>
+  <path d="M146 15V31M146 65V81" stroke="#F7F8F2" stroke-width="4.5" stroke-linecap="square"/>
+
+  <!-- S: the colored strap visibly threads through the buckle -->
+  <path d="M132 23H82C70 23 64 28 64 36C64 44 70 48 81 48H91C103 48 109 54 109 62C109 71 102 76 89 76H55"
+        stroke="#CCE86A" stroke-width="12" stroke-linejoin="round" stroke-linecap="square"/>
+  <path d="M84 20.4H128M85 25.6H128M58 73.4H89M58 78.6H87"
+        stroke="#F4F8D7" stroke-width="1.15" stroke-linecap="round" opacity=".72"/>
+
+  <!-- Small over-wire highlights make the threaded connection legible at logo scale -->
+  <path d="M119 23H132M119 27H129" stroke="#DFF28F" stroke-width="1.1" stroke-linecap="round" opacity=".85"/>
+</svg>

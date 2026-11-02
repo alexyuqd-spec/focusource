@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Content Manager | FOCUSOURCE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin.css?v=4">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body class="admin-body">
+  <section class="login-screen" data-login-screen>
+    <div class="login-panel">
+      <a class="brand" href="/"><span class="brand-mark">FSC</span><span data-admin-brand>FOCUSOURCE</span></a>
+      <p class="eyebrow">Content manager</p>
+      <h1>Welcome back.</h1>
+      <p>Sign in to manage products, navigation, brand settings and enquiries.</p>
+      <form data-login-form>
+        <label>Password<input type="password" name="password" autocomplete="current-password" required autofocus></label>
+        <button class="btn btn-primary btn-full" type="submit">Sign in <i data-lucide="log-in"></i></button>
+        <p class="form-status" role="status" data-login-status></p>
+      </form>
+      <a class="back-link" href="/"><i data-lucide="arrow-left"></i> Back to website</a>
+    </div>
+  </section>
+
+  <div class="admin-shell" data-admin-shell hidden>
+    <aside class="admin-sidebar">
+      <a class="brand brand-light" href="/"><span class="brand-mark">FSC</span><span data-admin-brand>FOCUSOURCE</span></a>
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <button class="active" type="button" data-tab="dashboard"><i data-lucide="layout-dashboard"></i> Overview</button>
+        <button type="button" data-tab="products"><i data-lucide="package"></i> Products</button>
+        <button type="button" data-tab="media"><i data-lucide="images"></i> 图片资源库</button>
+        <button type="button" data-tab="videos"><i data-lucide="film"></i> 视频管理</button>
+        <button type="button" data-tab="categories"><i data-lucide="folders"></i> Categories</button>
+        <button type="button" data-tab="articles"><i data-lucide="newspaper"></i> Articles</button>
+        <button type="button" data-tab="navigation"><i data-lucide="menu"></i> Navigation</button>
+        <button type="button" data-tab="page-content"><i data-lucide="panels-top-left"></i> Page content</button>
+        <button type="button" data-tab="brand"><i data-lucide="palette"></i> Brand &amp; content</button>
+        <button type="button" data-tab="seo"><i data-lucide="search"></i> SEO &amp; tracking</button>
+        <button type="button" data-tab="inquiries"><i data-lucide="inbox"></i> Enquiries <span class="nav-badge" data-inquiry-count>0</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="/" target="_blank"><i data-lucide="external-link"></i> View website</a>
+        <button type="button" data-logout><i data-lucide="log-out"></i> Sign out</button>
+      </div>
+    </aside>
+
+    <header class="admin-topbar">
+      <button class="icon-button admin-menu-button" type="button" aria-label="Open admin navigation" data-admin-menu><i data-lucide="menu"></i></button>
+      <div><p>Website administration</p><strong data-page-title>Overview</strong></div>
+      <div class="save-area"><span class="save-status" data-save-status>All changes saved</span><button class="btn btn-primary btn-small" type="button" data-save><i data-lucide="save"></i> Save changes</button></div>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-view active" data-view="dashboard">
+        <div class="page-heading"><div><p class="eyebrow">Overview</p><h1>Content at a glance</h1></div><p>Keep the most important sales content current without touching code.</p></div>
+        <div class="stat-grid">
+          <article><span>Products</span><strong data-stat-products>0</strong><i data-lucide="package"></i></article>
+          <article><span>Menu links</span><strong data-stat-menu>0</strong><i data-lucide="menu"></i></article>
+          <article><span>New enquiries</span><strong data-stat-inquiries>0</strong><i data-lucide="mail"></i></article>
+          <article><span>Tracking</span><strong class="small-stat" data-stat-tracking>Not set</strong><i data-lucide="bar-chart-3"></i></article>
+        </div>
+        <div class="admin-band">
+          <div><p class="eyebrow light">Quick check</p><h2>Before your next campaign</h2><p>Confirm contact details, campaign landing copy, product availability and Google Ads conversion settings.</p></div>
+          <button class="btn btn-accent" type="button" data-jump="seo">Review SEO &amp; tracking <i data-lucide="arrow-right"></i></button>
+        </div>
+      </section>
+
+      <section class="admin-view" data-view="products">
+        <div class="page-heading"><div><p class="eyebrow">Catalogue</p><h1>Products</h1></div><button class="btn btn-primary" type="button" data-add-product><i data-lucide="plus"></i> Add product</button></div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>Product</th><th>Category</th><th>Status</th><th>MOQ</th><th>Lead time</th><th>Order</th><th aria-label="Actions"></th></tr></thead>
+            <tbody data-product-rows></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-view" data-view="media">
+        <div class="page-heading"><div><p class="eyebrow">Media library</p><h1>图片资源库</h1></div></div>
+        <p>上传后可重复用于产品、文章和首页。支持 JPG、PNG、WebP；单个文件不超过 5 MB。使用中的资源需先替换并保存，才可删除。</p>
+        <div data-media-panel></div>
+      </section>
+
+      <section class="admin-view" data-view="videos">
+        <div class="page-heading"><div><p class="eyebrow">Video library</p><h1>视频管理</h1></div></div>
+        <p>管理网站视频并预览、复制地址或删除未使用的视频。支持 MP4，单个文件不超过 5 MB；使用中的视频需先替换并保存，才可删除。</p>
+        <div data-media-panel data-media-kind="video"></div>
+      </section>
+
+      <section class="admin-view" data-view="categories">
+        <div class="page-heading"><div><p class="eyebrow">Search landing pages</p><h1>Categories</h1></div><button class="btn btn-primary" type="button" data-add-category><i data-lucide="plus"></i> Add category</button></div>
+        <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Category</th><th>Products</th><th>Search title</th><th>Status</th><th aria-label="Actions"></th></tr></thead><tbody data-category-rows></tbody></table></div>
+      </section>
+
+      <section class="admin-view" data-view="navigation">
+        <div class="page-heading"><div><p class="eyebrow">Site structure</p><h1>Navigation</h1></div><button class="btn btn-primary" type="button" data-add-menu><i data-lucide="plus"></i> Add link</button></div>
+        <div class="settings-panel"><div class="settings-panel-heading"><h2>Primary menu</h2><p>Links appear in this order on desktop and mobile.</p></div><div class="menu-editor" data-menu-editor></div></div>
+      </section>
+
+      <section class="admin-view" data-view="articles">
+        <div class="page-heading"><div><p class="eyebrow">Knowledge content</p><h1>Articles</h1></div><button class="btn btn-primary" type="button" data-add-post><i data-lucide="plus"></i> Add article</button></div>
+        <div class="admin-table-wrap">
+          <table class="admin-table"><thead><tr><th>Article</th><th>Category</th><th>Date</th><th aria-label="Actions"></th></tr></thead><tbody data-post-rows></tbody></table>
+        </div>
+      </section>
+
+      <section class="admin-view" data-view="page-content">
+        <div class="page-heading"><div><p class="eyebrow">Homepage</p><h1>Page content</h1></div><p>Maintain every heading, description, button and repeated content block on the homepage.</p></div>
+        <div class="settings-grid">
+          <div class="settings-panel span-two"><div class="settings-panel-heading"><h2>Top bar &amp; hero</h2><p>Campaign message, labels and proof points.</p></div><div class="settings-fields two-columns">
+            <label class="span-two">Top bar text<input data-content-setting="topbarText"></label>
+            <label>Hero eyebrow<input data-content-setting="heroEyebrow"></label><label>Quote button<input data-content-setting="quoteButton"></label>
+            <label>Primary button<input data-content-setting="heroPrimaryButton"></label><label>Secondary button<input data-content-setting="heroSecondaryButton"></label>
+            <label class="span-two">Hero proof points <small>One item per line</small><textarea rows="4" data-content-list="heroProof"></textarea></label>
+          </div></div>
+          <div class="settings-panel span-two"><div class="settings-panel-heading split-heading"><div><h2>Company figures</h2><p>Key trust metrics below the hero.</p></div><button class="btn btn-outline btn-small" type="button" data-add-collection="stats"><i data-lucide="plus"></i> Add</button></div><div class="repeater-editor" data-collection="stats"></div></div>
+          <div class="settings-panel span-two"><div class="settings-panel-heading"><h2>Product section</h2></div><div class="settings-fields"><label>Eyebrow<input data-content-setting="productsEyebrow"></label><label>Heading<input data-content-setting="productsTitle"></label><label>Description<textarea rows="3" data-content-setting="productsText"></textarea></label></div></div>
+          <div class="settings-panel span-two"><div class="settings-panel-heading split-heading"><div><h2>Capabilities section</h2><p>Introduction and service items.</p></div><button class="btn btn-outline btn-small" type="button" data-add-collection="capabilities"><i data-lucide="plus"></i> Add</button></div><div class="settings-fields two-columns"><label>Eyebrow<input data-content-setting="capabilitiesEyebrow"></label><label>Button text<input data-content-setting="capabilitiesButton"></label><label class="span-two">Heading<input data-content-setting="capabilitiesTitle"></label><label class="span-two">Description<textarea rows="3" data-content-setting="capabilitiesText"></textarea></label></div><div class="repeater-editor" data-collection="capabilities"></div></div>
+          <div class="settings-panel span-two"><div class="settings-panel-heading split-heading"><div><h2>Process section</h2><p>Steps from enquiry to delivery.</p></div><button class="btn btn-outline btn-small" type="button" data-add-collection="process"><i data-lucide="plus"></i> Add</button></div><div class="settings-fields two-columns"><label>Eyebrow<input data-content-setting="processEyebrow"></label><label>Heading<input data-content-setting="processTitle"></label></div><div class="repeater-editor" data-collection="process"></div></div>
+          <div class="settings-panel"><div class="settings-panel-heading"><h2>Insights section</h2></div><div class="settings-fields"><label>Eyebrow<input data-content-setting="insightsEyebrow"></label><label>Heading<input data-content-setting="insightsTitle"></label><label>Link text<input data-content-setting="insightsLink"></label></div></div>
+          <div class="settings-panel"><div class="settings-panel-heading"><h2>Closing call to action</h2></div><div class="settings-fields"><label>Eyebrow<input data-content-setting="ctaEyebrow"></label><label>Heading<input data-content-setting="ctaTitle"></label><label>Button text<input data-content-setting="ctaButton"></label></div></div>
+          <div class="settings-panel span-two"><div class="settings-panel-heading"><h2>Enquiry form</h2></div><div class="settings-fields two-columns"><label>Eyebrow<input data-content-setting="inquiryEyebrow"></label><label>Submit button<input data-content-setting="inquiryButton"></label><label class="span-two">Heading<input data-content-setting="inquiryTitle"></label><label class="span-two">Introduction<textarea rows="3" data-content-setting="inquiryText"></textarea></label><label class="span-two">Success message<textarea rows="3" data-content-setting="inquirySuccess"></textarea></label></div></div>
+          <div class="settings-panel span-two"><div class="settings-panel-heading"><h2>Footer headings</h2></div><div class="settings-fields two-columns"><label>Products heading<input data-content-setting="footerProductsTitle"></label><label>Company heading<input data-content-setting="footerCompanyTitle"></label><label>Contact heading<input data-content-setting="footerContactTitle"></label></div></div>
+        </div>
+      </section>
+
+      <section class="admin-view" data-view="brand">
+        <div class="page-heading"><div><p class="eyebrow">Identity &amp; copy</p><h1>Brand &amp; content</h1></div><p>Update the most visible content across the site.</p></div>
+        <div class="settings-grid">
+          <div class="settings-panel">
+            <div class="settings-panel-heading"><h2>Brand identity</h2><p>Name, tagline and logo.</p></div>
+            <div class="settings-fields">
+              <label>Brand name<input data-setting="brandName"></label>
+              <label>Tagline<input data-setting="tagline"></label>
+              <label>Logo image<div class="upload-control"><input data-setting="logo" placeholder="Image URL or uploaded data"><button class="btn btn-outline btn-small" type="button" data-upload-for="logo"><i data-lucide="upload"></i> Upload</button><input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden data-file-input="logo"></div></label>
+              <div class="logo-preview" data-logo-preview><span>No logo uploaded</span></div>
+            </div>
+          </div>
+          <div class="settings-panel">
+            <div class="settings-panel-heading"><h2>Contact details</h2><p>Used in the header, footer and enquiry links.</p></div>
+            <div class="settings-fields">
+              <label>Email<input type="email" data-setting="email"></label>
+              <label>Phone<input data-setting="phone"></label>
+              <label>WhatsApp<input data-setting="whatsapp"></label>
+              <label>Factory location<input data-setting="address"></label>
+            </div>
+          </div>
+          <div class="settings-panel span-two">
+            <div class="settings-panel-heading"><h2>Homepage hero</h2><p>The first message visitors see from search and advertising campaigns.</p></div>
+            <div class="settings-fields two-columns">
+              <label class="span-two">Headline<input data-setting="heroTitle"></label>
+              <label class="span-two">Supporting text<textarea rows="4" data-setting="heroText"></textarea></label>
+              <label class="span-two">Hero image<div class="upload-control"><input data-setting="heroImage" placeholder="Image URL or uploaded data"><button class="btn btn-outline btn-small" type="button" data-setting-image-upload="heroImage"><i data-lucide="upload"></i> Upload</button><input type="file" accept="image/png,image/jpeg,image/webp" hidden data-setting-image-file="heroImage"></div></label>
+            </div>
+          </div>
+          <div class="settings-panel span-two">
+            <div class="settings-panel-heading"><h2>Company introduction</h2><p>Controls the About section on the homepage.</p></div>
+            <div class="settings-fields two-columns">
+              <label>Section eyebrow<input data-content-setting="aboutEyebrow"></label>
+              <label>Fallback company image<div class="upload-control"><input data-content-setting="aboutImage" placeholder="Image URL"><button class="btn btn-outline btn-small" type="button" data-content-image-upload="aboutImage"><i data-lucide="upload"></i> Upload</button><input type="file" accept="image/png,image/jpeg,image/webp" hidden data-content-image-file="aboutImage"></div></label>
+              <label>Fallback image ALT<input data-content-setting="aboutImageAlt" placeholder="Describe the workshop image"></label>
+              <label class="span-two">Company video<div class="upload-control"><input data-content-setting="aboutVideo" placeholder="MP4 video URL"><button class="btn btn-outline btn-small" type="button" data-content-image-upload="aboutVideo"><i data-lucide="upload"></i> Upload MP4</button><input type="file" accept="video/mp4" hidden data-content-image-file="aboutVideo"></div></label>
+              <label class="span-two">Video poster image<div class="upload-control"><input data-content-setting="aboutVideoPoster" placeholder="Image URL"><button class="btn btn-outline btn-small" type="button" data-content-image-upload="aboutVideoPoster"><i data-lucide="upload"></i> Upload</button><input type="file" accept="image/png,image/jpeg,image/webp" hidden data-content-image-file="aboutVideoPoster"></div></label>
+              <label class="span-two">Video SEO title<input data-content-setting="aboutVideoTitle" maxlength="120"></label>
+              <label class="span-two">Video SEO description<textarea rows="3" data-content-setting="aboutVideoDescription" maxlength="300"></textarea></label>
+              <label>Video upload date<input data-content-setting="aboutVideoUploadDate" placeholder="2026-10-20T17:19:56+08:00"></label>
+              <label>Video duration<input data-content-setting="aboutVideoDuration" placeholder="PT25.267S"></label>
+              <label class="span-two">Company introduction title<input data-content-setting="aboutTitle"></label>
+              <label class="span-two">Company introduction<textarea rows="5" data-content-setting="aboutText"></textarea></label>
+              <label class="span-two">Company quote<textarea rows="3" data-content-setting="aboutQuote"></textarea></label>
+              <label class="span-two">Certifications <small>One item per line</small><textarea rows="4" data-content-list="aboutCertifications"></textarea></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-view" data-view="seo">
+        <div class="page-heading"><div><p class="eyebrow">Discoverability</p><h1>SEO &amp; tracking</h1></div><p>Manage search snippets and campaign measurement.</p></div>
+        <div class="settings-grid">
+          <div class="settings-panel span-two">
+            <div class="settings-panel-heading"><h2>Search appearance</h2><p>Keep the title focused and the description useful for human searchers.</p></div>
+            <div class="settings-fields">
+              <label>SEO title<input data-setting="seoTitle" maxlength="70"><small><span data-count-for="seoTitle">0</span>/70 characters</small></label>
+              <label>Meta description<textarea rows="4" data-setting="seoDescription" maxlength="170"></textarea><small><span data-count-for="seoDescription">0</span>/170 characters</small></label>
+              <label>Target keywords<input data-setting="seoKeywords"></label>
+              <label>Public website URL<input type="url" data-setting="siteUrl"></label>
+              <label>Google Search Console verification token<input data-setting="googleSiteVerification" pattern="[A-Za-z0-9_-]*"><small>Paste only the content value of the HTML verification tag.</small></label>
+            </div>
+          </div>
+          <div class="settings-panel">
+            <div class="settings-panel-heading"><h2>Google Analytics</h2><p>Optional GA4 measurement ID.</p></div>
+            <div class="settings-fields"><label>Measurement ID<input data-setting="gaId" placeholder="G-XXXXXXXXXX" pattern="G-[A-Za-z0-9]+"></label><p>Visits, successful enquiries, WhatsApp and email clicks are measured after the visitor allows analytics.</p></div>
+          </div>
+          <div class="settings-panel">
+            <div class="settings-panel-heading"><h2>Google Ads conversion</h2><p>Recorded after a successful enquiry.</p></div>
+            <div class="settings-fields"><label>Conversion ID<input data-setting="googleAdsId" placeholder="AW-XXXXXXXXX" pattern="AW-[0-9]+"></label><label>Conversion label<input data-setting="googleAdsLabel"></label><p>Use a Google Ads ID, not a phone number.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-view" data-view="inquiries">
+        <div class="page-heading"><div><p class="eyebrow">Sales inbox</p><h1>Enquiries</h1></div><button class="btn btn-outline" type="button" data-refresh-inquiries><i data-lucide="refresh-cw"></i> Refresh</button></div>
+        <div class="admin-table-wrap">
+          <table class="admin-table enquiry-table"><thead><tr><th>Contact</th><th>Project</th><th>Received</th><th>Status</th></tr></thead><tbody data-inquiry-rows></tbody></table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog class="modal product-editor" data-product-editor>
+    <button class="modal-close icon-button" type="button" aria-label="Close" data-close-editor><i data-lucide="x"></i></button>
+    <form data-product-form>
+      <input type="hidden" name="id">
+      <p class="eyebrow">Catalogue item</p><h2 data-editor-title>Add product</h2>
+      <div class="form-grid">
+        <label>Product name <span>*</span><input name="name" required></label>
+        <label>Category <span>*</span><input name="category" required></label>
+        <label class="full-field">Description <span>*</span><textarea name="description" rows="4" required></textarea></label>
+        <label class="full-field">SEO title<input name="seoTitle" maxlength="70" placeholder="Primary keyword | FOCUSOURCE"><small>Used as the product page title in Google. Aim for 50-65 characters.</small></label>
+        <label class="full-field">Meta description<textarea name="seoDescription" rows="3" maxlength="170" placeholder="Summarize the product, application and supplier advantage."></textarea><small>Used below the page title in search results. Aim for 140-160 characters.</small></label>
+        <label class="full-field">Product image<div class="upload-control"><input name="image" placeholder="Image URL or uploaded data"><button class="btn btn-outline btn-small" type="button" data-product-image-upload><i data-lucide="upload"></i> Upload</button><input type="file" name="imageFile" accept="image/png,image/jpeg,image/webp" hidden></div></label>
+        <label class="full-field">Image ALT text<input name="imageAlt" maxlength="180" placeholder="Describe the visible product and image details"><small>Used by screen readers and search engines. Describe what is visible, not a list of keywords.</small></label>
+        <div class="product-image-preview full-field" data-product-image-preview><span>No product image selected</span></div>
+        <label>Minimum order<input name="moq" placeholder="500 pcs"></label>
+        <label>Lead time<input name="leadTime" placeholder="12-18 days"></label>
+        <label class="full-field">Materials<input name="materials"></label>
+        <label class="full-field">Specification table<textarea name="specificationTable" rows="10" placeholder="Use | between columns and one product model per line"></textarea><small>First line is the table header. Use | to separate columns.</small></label>
+        <label class="checkbox-label"><input type="checkbox" name="featured"> Featured product</label>
+        <label class="checkbox-label"><input type="checkbox" name="active" checked> Published on website</label>
+      </div>
+      <button class="btn btn-primary btn-full" type="submit">Save product</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal product-editor" data-category-editor>
+    <button class="modal-close icon-button" type="button" aria-label="Close" data-close-category-editor><i data-lucide="x"></i></button>
+    <form data-category-form>
+      <input type="hidden" name="id">
+      <p class="eyebrow">Category landing page</p><h2 data-category-editor-title>Add category</h2>
+      <div class="form-grid">
+        <label>Category name <span>*</span><input name="name" required></label>
+        <label>URL slug <span>*</span><input name="slug" required placeholder="composite-strapping"></label>
+        <label class="full-field">SEO title<input name="seoTitle" maxlength="70" required></label>
+        <label class="full-field">Meta description<textarea name="seoDescription" rows="3" maxlength="170" required></textarea></label>
+        <label class="full-field">Category introduction <span>*</span><textarea name="intro" rows="5" required></textarea></label>
+        <label class="full-field">Applications <small>One application per line</small><textarea name="applications" rows="4"></textarea></label>
+        <label class="full-field">Key benefits <small>One benefit per line</small><textarea name="benefits" rows="4"></textarea></label>
+        <label class="full-field">FAQs <small>One question and answer per line, separated by |</small><textarea name="faqs" rows="7" placeholder="How do I choose a product?|Match the specification to your load."></textarea></label>
+        <label class="checkbox-label"><input type="checkbox" name="active" checked> Published and indexable</label>
+      </div>
+      <button class="btn btn-primary btn-full" type="submit">Save category</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal product-editor" data-post-editor>
+    <button class="modal-close icon-button" type="button" aria-label="Close" data-close-post-editor><i data-lucide="x"></i></button>
+    <form data-post-form>
+      <input type="hidden" name="id"><p class="eyebrow">Article card</p><h2 data-post-editor-title>Add article</h2>
+      <div class="form-grid">
+        <label class="full-field">Title <span>*</span><input name="title" required></label>
+        <label>Category <span>*</span><input name="category" required></label><label>Date <span>*</span><input type="date" name="date" required></label>
+        <label class="full-field">Article image<div class="upload-control"><input name="image"><button class="btn btn-outline btn-small" type="button" data-post-image-upload><i data-lucide="upload"></i> Upload</button><input type="file" name="imageFile" accept="image/png,image/jpeg,image/webp" hidden></div></label>
+        <label class="full-field">Summary <span>*</span><textarea name="excerpt" rows="4" required></textarea></label>
+      </div><button class="btn btn-primary btn-full" type="submit">Save article</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal media-picker" data-media-picker>
+    <button class="modal-close icon-button" type="button" aria-label="关闭图库" data-close-media-picker>×</button>
+    <h2>选择资源</h2><p>选择后点击 Save changes 发布。</p>
+    <div data-media-panel></div>
+  </dialog>
+  <div class="toast" role="status" data-toast></div>
+  <script src="/media-admin.js?v=5" defer></script>
+  <script src="/admin.js?v=8" defer></script>
+</body>
+</html>

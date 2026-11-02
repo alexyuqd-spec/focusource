@@ -1,0 +1,70 @@
+{
+  "fr": {
+    "label":"Français", "titles":["Feuillard composite et boucles en fil d’acier","Feuillard composite polyester pour le cerclage","Boucles en fil d’acier pour feuillard composite"],
+    "slugs":["","feuillard-composite","boucles-feuillard"],
+    "intro":"FOCUSOURCE, à Qingdao en Chine, fournit du feuillard composite polyester et des boucles en fil d’acier pour l’emballage industriel. Nous acceptons les demandes de petites quantités et d’approvisionnement complémentaire. Les spécifications, quantités minimales et délais sont à confirmer pour chaque commande.",
+    "strap":"Le feuillard composite associe des fils polyester à un revêtement polymère. Il s’utilise avec une boucle et un outil de tension compatibles. Pour choisir un système, précisez la marchandise, le conditionnement et les contraintes de transport.",
+    "buckle":"Les boucles en fil d’acier relient les deux extrémités du feuillard composite. Vérifiez la largeur du feuillard, le diamètre du fil, la finition et la compatibilité de l’ensemble avant de commander.",
+    "specs":"Spécifications et conditionnement", "headers":["Référence","Largeur","Épaisseur","Type de fil","Résistance minimale à la rupture du feuillard","Résistance minimale à la rupture du système","Mètres/bobine","Bobines/carton","Diamètre du fil","Conditionnement","Poids brut/carton","Dimensions du carton"],
+    "values":["Fil plat","Fil retordu","bobines/carton","pièces/carton"],
+    "caution":"Les valeurs de rupture ne sont pas des charges de travail admissibles. Validez le feuillard, la boucle, l’outil et la méthode de cerclage pour votre application.",
+    "faq":"Questions fréquentes", "q1":"Quelles informations envoyer pour une demande ?", "a1":"Indiquez la marchandise, la largeur ou la référence actuelle, le type de boucle, la quantité et le pays ou port de destination.",
+    "q2":"Le feuillard composite remplace-t-il tous les autres systèmes ?", "a2":"Non. Le feuillard PET extrudé, le feuillard composite et les sangles à cliquet ont des constructions et des méthodes d’utilisation différentes. Vérifiez l’adéquation à chaque application.",
+    "contact":"Contact et demande de renseignements", "email":"Envoyer un e-mail", "origin":"FOCUSOURCE fournit les produits depuis la Chine. Cette page ne représente pas un entrepôt ou un bureau local en France.", "catalogue":"Catalogue en anglais", "guide":"Guide de passage de boucle en images — anglais", "home":"Accueil"
+  },
+  "pt": {
+    "label":"Português", "titles":["Fita composta e fivelas de arame de aço","Fita composta de poliéster para amarração de cargas","Fivelas de arame de aço para fita composta"], "slugs":["","fita-composta","fivelas-de-arame"],
+    "intro":"A FOCUSOURCE, em Qingdao, China, fornece fita composta de poliéster e fivelas de arame de aço para embalagens industriais. Atendemos necessidades de pequenos lotes e fornecimento complementar. Especificações, quantidades mínimas e prazos devem ser confirmados para cada pedido.",
+    "strap":"A fita composta combina fios de poliéster com um revestimento polimérico. É utilizada com fivela e ferramenta de tensionamento compatíveis. Informe a carga, a embalagem e as condições de transporte para avaliar o conjunto.",
+    "buckle":"As fivelas de arame de aço unem as duas pontas da fita composta. Verifique a largura da fita, o diâmetro do arame, o acabamento e a compatibilidade do conjunto antes de comprar.",
+    "specs":"Especificações e embalagem", "headers":["Código","Largura","Espessura","Tipo de fio","Força mínima de ruptura da fita","Força mínima de ruptura do sistema","Metros/rolo","Rolos/caixa","Diâmetro do arame","Embalagem","Peso bruto/caixa","Dimensões da caixa"], "values":["Fio plano","Fio torcido","rolos/caixa","peças/caixa"],
+    "caution":"A força de ruptura não é a carga de trabalho admissível. Confirme fita, fivela, ferramenta e método de aplicação para a carga real.",
+    "faq":"Perguntas frequentes", "q1":"Quais informações enviar para uma consulta?", "a1":"Informe a mercadoria, a largura ou código atual, o tipo de fivela, a quantidade e o país ou porto de destino.",
+    "q2":"A fita composta substitui qualquer outro sistema?", "a2":"Não. Fita PET extrudada, fita composta e cintas com catraca têm construções e métodos de uso diferentes. É necessário verificar a adequação à aplicação.",
+    "contact":"Contato e consulta", "email":"Enviar e-mail", "origin":"A FOCUSOURCE fornece os produtos a partir da China. Esta página não representa um armazém ou escritório local no Brasil ou em Portugal.", "catalogue":"Catálogo em inglês", "guide":"Guia ilustrado de passagem da fivela — inglês", "home":"Início"
+  },
+  "es": {
+    "label":"Español", "titles":["Fleje compuesto y hebillas de alambre de acero","Fleje compuesto de poliéster para embalaje","Hebillas de alambre de acero para fleje compuesto"], "slugs":["","fleje-compuesto","hebillas-de-alambre"],
+    "intro":"FOCUSOURCE, en Qingdao, China, suministra fleje compuesto de poliéster y hebillas de alambre de acero para embalaje industrial. Atendemos pedidos de pequeñas cantidades y necesidades de suministro complementario. Las especificaciones, cantidades mínimas y plazos se confirman para cada pedido.",
+    "strap":"El fleje compuesto combina hilos de poliéster con un recubrimiento polimérico. Se utiliza con una hebilla y una herramienta de tensado compatibles. Indique la mercancía, el embalaje y las condiciones de transporte para evaluar el sistema.",
+    "buckle":"Las hebillas de alambre de acero unen los extremos del fleje compuesto. Compruebe el ancho del fleje, el diámetro del alambre, el acabado y la compatibilidad del conjunto antes de comprar.",
+    "specs":"Especificaciones y embalaje", "headers":["Código","Ancho","Espesor","Tipo de hilo","Resistencia mínima a la rotura del fleje","Resistencia mínima a la rotura del sistema","Metros/bobina","Bobinas/caja","Diámetro del alambre","Embalaje","Peso bruto/caja","Dimensiones de caja"], "values":["Hilo plano","Hilo retorcido","bobinas/caja","piezas/caja"],
+    "caution":"La resistencia a la rotura no es la carga de trabajo admisible. Confirme fleje, hebilla, herramienta y método de aplicación para la carga real.",
+    "faq":"Preguntas frecuentes", "q1":"¿Qué información debe incluir una consulta?", "a1":"Indique la mercancía, el ancho o código actual, el tipo de hebilla, la cantidad y el país o puerto de destino.",
+    "q2":"¿El fleje compuesto puede sustituir a cualquier sistema?", "a2":"No. El fleje PET extruido, el fleje compuesto y las cinchas con trinquete tienen construcciones y métodos de uso diferentes. Debe comprobarse la idoneidad para cada aplicación.",
+    "contact":"Contacto y consultas", "email":"Enviar correo", "origin":"FOCUSOURCE suministra desde China. Esta página no representa una oficina o almacén local en un país de habla hispana.", "catalogue":"Catálogo en inglés", "guide":"Guía ilustrada para pasar la hebilla — inglés", "home":"Inicio"
+  },
+  "de": {
+    "label":"Deutsch", "titles":["Kompositband und Drahtverschlussklemmen","Polyester-Kompositband zur Umreifung","Drahtverschlussklemmen für Kompositband"], "slugs":["","kompositband","drahtverschlussklemmen"],
+    "intro":"FOCUSOURCE in Qingdao, China, liefert Polyester-Kompositband und Drahtverschlussklemmen für Industrieverpackungen. Wir unterstützen kleine Bestellmengen und ergänzende Beschaffung. Spezifikationen, Mindestmengen und Lieferzeiten werden für jede Bestellung bestätigt.",
+    "strap":"Kompositband besteht aus Polyesterfäden mit einer Polymerbeschichtung. Es wird mit einer passenden Verschlussklemme und einem geeigneten Spannwerkzeug eingesetzt. Nennen Sie Packgut, Verpackung und Transportbedingungen, damit das System beurteilt werden kann.",
+    "buckle":"Drahtverschlussklemmen verbinden die beiden Enden des Kompositbandes. Prüfen Sie Bandbreite, Drahtdurchmesser, Oberflächenbehandlung und Systemkompatibilität vor der Bestellung.",
+    "specs":"Spezifikationen und Verpackung", "headers":["Artikelcode","Breite","Dicke","Fadenart","Minimale Bandbruchkraft","Minimale Systembruchkraft","Meter/Rolle","Rollen/Karton","Drahtdurchmesser","Verpackung","Bruttogewicht/Karton","Kartonmaße"], "values":["Flachgarn","Zwirn","Rollen/Karton","Stück/Karton"],
+    "caution":"Die Bruchkraft ist keine zulässige Arbeitslast. Band, Klemme, Werkzeug und Anwendungsmethode müssen für den tatsächlichen Einsatz geprüft werden.",
+    "faq":"Häufige Fragen", "q1":"Welche Angaben werden für eine Anfrage benötigt?", "a1":"Bitte nennen Sie Packgut, bisherige Bandbreite oder Artikelnummer, Klemmentyp, Menge sowie Zielland oder Zielhafen.",
+    "q2":"Kann Kompositband jedes andere System ersetzen?", "a2":"Nein. Extrudiertes PET-Band, Kompositband und Ratschengurte unterscheiden sich in Aufbau und Anwendung. Die Eignung muss für den jeweiligen Einsatz bestätigt werden.",
+    "contact":"Kontakt und Anfrage", "email":"E-Mail senden", "origin":"FOCUSOURCE liefert aus China. Diese Seite steht nicht für ein Lager oder eine Niederlassung in Deutschland.", "catalogue":"Katalog auf Englisch", "guide":"Bebilderte Anleitung zum Einfädeln — Englisch", "home":"Startseite"
+  },
+  "ru": {
+    "label":"Русский", "titles":["Композитная лента и проволочные пряжки","Композитная полиэстеровая лента для обвязки","Проволочные пряжки для композитной ленты"], "slugs":["","kompozitnaya-lenta","provolochnye-pryazhki"],
+    "intro":"FOCUSOURCE, Циндао, Китай, поставляет композитную полиэстеровую ленту и стальные проволочные пряжки для промышленной упаковки. Рассматриваем небольшие партии и дополнительные поставки. Характеристики, минимальный заказ и сроки уточняются для каждого заказа.",
+    "strap":"Композитная лента состоит из полиэстеровых нитей с полимерным покрытием. Используется с совместимой пряжкой и натяжным инструментом. Для подбора системы укажите груз, способ упаковки и условия перевозки.",
+    "buckle":"Стальные проволочные пряжки соединяют концы композитной ленты. Перед заказом уточните ширину ленты, диаметр проволоки, покрытие и совместимость всего комплекта.",
+    "specs":"Характеристики и упаковка", "headers":["Код","Ширина","Толщина","Тип нити","Мин. разрывное усилие ленты","Мин. разрывное усилие системы","Метров/рулон","Рулонов/коробка","Диаметр проволоки","Упаковка","Вес брутто/коробка","Размер коробки"], "values":["Плоская нить","Крученая нить","рул./кор.","шт./кор."],
+    "caution":"Разрывное усилие не является допустимой рабочей нагрузкой. Необходимо проверить ленту, пряжку, инструмент и способ обвязки для конкретного груза.",
+    "faq":"Частые вопросы", "q1":"Что указать в запросе?", "a1":"Укажите тип груза, текущую ширину или код ленты, тип пряжки, количество и страну или порт назначения.",
+    "q2":"Может ли композитная лента заменить любую другую систему?", "a2":"Нет. Экструдированная ПЭТ-лента, композитная лента и ремни с храповым механизмом имеют разную конструкцию и способы применения. Пригодность нужно проверять отдельно.",
+    "contact":"Контакты и запрос", "email":"Написать письмо", "origin":"FOCUSOURCE осуществляет поставки из Китая. Эта страница не представляет местный склад или офис в России.", "catalogue":"Каталог на английском", "guide":"Иллюстрированная инструкция по заправке пряжки — английский", "home":"Главная"
+  },
+  "ar": {
+    "label":"العربية", "titles":["أشرطة الربط المركبة والأبازيم السلكية","أشرطة ربط مركبة من البوليستر للتغليف","أبازيم سلكية فولاذية لأشرطة الربط المركبة"], "slugs":["","composite-strapping","wire-buckles"],
+    "intro":"توفر FOCUSOURCE من تشينغداو في الصين أشرطة ربط مركبة من البوليستر وأبازيم من الأسلاك الفولاذية للتغليف الصناعي. ندعم طلبات الكميات الصغيرة واحتياجات التوريد الإضافي. تُؤكَّد المواصفات والحد الأدنى للطلب ومواعيد التوريد لكل طلب.",
+    "strap":"تتكون أشرطة الربط المركبة من خيوط بوليستر مغطاة بطبقة بوليمرية. تُستخدم مع إبزيم وأداة شد متوافقين. يرجى تحديد نوع البضاعة وطريقة التغليف وظروف النقل لتقييم ملاءمة النظام.",
+    "buckle":"تصل الأبازيم السلكية الفولاذية بين طرفي شريط الربط المركب. يجب التحقق من عرض الشريط وقطر السلك والمعالجة السطحية وتوافق المجموعة قبل الطلب.",
+    "specs":"المواصفات والتعبئة", "headers":["رمز المنتج","العرض","السماكة","نوع الخيط","الحد الأدنى لقوة كسر الشريط","الحد الأدنى لقوة كسر النظام","متر لكل لفة","لفات لكل صندوق","قطر السلك","التعبئة","الوزن الإجمالي للصندوق","أبعاد الصندوق"], "values":["خيط مسطح","خيط مفتول","لفة/صندوق","قطعة/صندوق"],
+    "caution":"قوة الكسر ليست حمولة التشغيل المسموح بها. يجب التحقق من الشريط والإبزيم والأداة وطريقة الربط بما يناسب الاستخدام الفعلي.",
+    "faq":"الأسئلة الشائعة", "q1":"ما المعلومات المطلوبة للاستفسار؟", "a1":"يرجى إرسال نوع البضاعة وعرض الشريط الحالي أو رمزه ونوع الإبزيم والكمية وبلد أو ميناء الوصول.",
+    "q2":"هل يمكن للأشرطة المركبة أن تحل محل جميع الأنظمة الأخرى؟", "a2":"لا. تختلف أشرطة PET المبثوقة والأشرطة المركبة وأحزمة الربط ذات السقاطة في البنية وطريقة الاستخدام. يجب التأكد من الملاءمة لكل تطبيق.",
+    "contact":"التواصل والاستفسار", "email":"إرسال بريد إلكتروني", "origin":"تورد FOCUSOURCE من الصين. لا تمثل هذه الصفحة مستودعًا أو مكتبًا محليًا في دولة عربية.", "catalogue":"كتالوج باللغة الإنجليزية", "guide":"دليل مصور لتمرير الشريط في الإبزيم — بالإنجليزية", "home":"الرئيسية"
+  }
+}
