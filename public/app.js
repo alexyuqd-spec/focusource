@@ -152,7 +152,6 @@ function applySettings() {
     description: settings.organizationDescription || `${settings.brandName} manufactures polyester (PET) composite strapping, woven lashing, wire buckles and tensioning tools in Qingdao, Shandong, China.`,
     address: {
       '@type': 'PostalAddress',
-      ...(settings.streetAddress ? { streetAddress: settings.streetAddress } : {}),
       addressLocality: settings.addressLocality || 'Qingdao',
       addressRegion: settings.addressRegion || 'Shandong',
       addressCountry: settings.addressCountry || 'CN'

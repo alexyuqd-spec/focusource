@@ -3,11 +3,12 @@ const esc = (value) => String(value || '').replace(/[&<>"']/g, (character) => ({
 }[character]));
 
 function displayAddress(settings) {
-  const country = String(settings.addressCountry || '').toUpperCase() === 'CN' ? 'China' : settings.addressCountry;
-  const parts = [settings.streetAddress, settings.addressLocality, settings.addressRegion, country]
+  const countryCode = String(settings.addressCountry || 'CN').trim().toUpperCase();
+  const country = countryCode === 'CN' ? 'China' : String(settings.addressCountry || 'China').trim();
+  const parts = [settings.addressLocality || 'Qingdao', settings.addressRegion || 'Shandong', country]
     .map((part) => String(part || '').trim())
     .filter(Boolean);
-  return parts.length ? parts.join(', ') : (settings.address || 'Qingdao, Shandong, China');
+  return parts.join(' ') || 'Qingdao Shandong China';
 }
 
 function sameAs(settings) {
