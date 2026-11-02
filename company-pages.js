@@ -45,11 +45,11 @@ function specHighlights(products) {
 function renderAboutPage(site) {
   const settings = site.settings || {};
   const content = site.content || {};
-  const title = `About ${settings.brandName} | Composite PET Strapping`;
-  const description = `${settings.legalName || settings.brandName} manufactures polyester (PET) composite strapping, woven lashing, wire buckles and tensioning tools in Qingdao, Shandong, China.`;
+  const title = `About ${settings.brandName} | Composite Cord Strapping`;
+  const description = `${settings.legalName || settings.brandName} manufactures polyester composite cord strapping, woven lashing, wire buckles and tensioning tools in Qingdao, Shandong, China.`;
   const categories = (site.categories || []).filter((category) => category.active !== false && category.slug !== 'load-securing-applications');
   const facts = specHighlights(site.products || []);
-  const main = `<section class="category-page-hero"><div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>About</span></nav><p class="eyebrow">Qingdao manufacturer</p><h1>FOCUSOURCE, a composite and PET strapping manufacturer in Qingdao</h1><p>${esc(settings.organizationDescription || description)}</p></div></section>
+  const main = `<section class="category-page-hero"><div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>About</span></nav><p class="eyebrow">Qingdao manufacturer</p><h1>FOCUSOURCE Composite Strapping &amp; Wire Buckles Manufacturer</h1><p>${esc(settings.organizationDescription || description)}</p></div></section>
   <section class="section"><div class="container category-overview-grid"><div><h2>Company details</h2><div class="detail-list"><div><span>Brand</span><strong>${esc(settings.brandName)}</strong></div>${settings.legalName ? `<div><span>Legal name</span><strong>${esc(settings.legalName)}</strong></div>` : ''}<div><span>Location</span><strong>${esc(displayAddress(settings))}</strong></div><div><span>Email</span><strong>${esc(settings.email)}</strong></div><div><span>Phone</span><strong>${esc(settings.phone)}</strong></div></div><p><a href="${esc(sameAs(settings))}" rel="noopener noreferrer">${esc(sameAs(settings).replace(/^https?:\/\//, ''))}</a> is the FOCUSOURCE brand site.</p></div><div><h2>What FOCUSOURCE makes</h2><ul>${categories.map((category) => `<li><a href="/categories/${esc(category.slug)}">${esc(category.name)}</a></li>`).join('')}</ul></div></div></section>
   <section class="section"><div class="container"><p class="eyebrow">Published figures</p><h2>Specification highlights</h2><p>These ranges are taken from the specification tables on the product pages.</p><ul>${facts.map((fact) => `<li>${esc(fact)}</li>`).join('')}</ul><p>${esc(content.aboutText || '')}</p></div></section>`;
   return shell(settings, title, description, '/about', main);
