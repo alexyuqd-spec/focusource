@@ -28,8 +28,8 @@ SERVICE_GROUP=${SERVICE_GROUP:-$(id -gn "$SERVICE_USER")}
 getent group "$SERVICE_GROUP" >/dev/null
 echo "Keeping existing service account: $SERVICE_USER:$SERVICE_GROUP"
 test -f "$SOURCE_DIR/inquiry-notifications.js"
-for file in server.js seo-guides.js brand-catalogue.js media-library.js inquiry-notifications.js http-request.js package.json public/index.html public/app.js public/admin.html public/admin.js public/tracking.js public/tracking.css public/guides.css public/brand-catalogue.css public/favicon.ico scripts/audit-site.js deploy/linux/focusource.service deploy/linux/focusource-legacy.service deploy/linux/focusource-backup.sh deploy/linux/focusource-backup.service deploy/linux/focusource-backup.timer deploy/linux/apply-launch-settings.js deploy/linux/check-launch-env.js; do test -f "$SOURCE_DIR/$file"; done
-for file in server.js seo-guides.js brand-catalogue.js media-library.js inquiry-notifications.js http-request.js scripts/audit-site.js deploy/linux/check-launch-env.js deploy/linux/apply-launch-settings.js; do /usr/bin/node --check "$SOURCE_DIR/$file"; done
+for file in server.js applications.js company-pages.js international-search.js vietnam-search.js search-translations.json seo-guides.js brand-catalogue.js media-library.js inquiry-notifications.js http-request.js package.json public/index.html public/app.js public/admin.html public/admin.js public/tracking.js public/tracking.css public/guides.css public/brand-catalogue.css public/favicon.ico scripts/audit-site.js deploy/linux/focusource.service deploy/linux/focusource-legacy.service deploy/linux/focusource-backup.sh deploy/linux/focusource-backup.service deploy/linux/focusource-backup.timer deploy/linux/apply-launch-settings.js deploy/linux/check-launch-env.js; do test -f "$SOURCE_DIR/$file"; done
+for file in server.js applications.js company-pages.js international-search.js vietnam-search.js seo-guides.js brand-catalogue.js media-library.js inquiry-notifications.js http-request.js scripts/audit-site.js deploy/linux/check-launch-env.js deploy/linux/apply-launch-settings.js; do /usr/bin/node --check "$SOURCE_DIR/$file"; done
 # Validate the existing secret without printing it. Never generate or replace a password here.
 /usr/bin/node "$SOURCE_DIR/deploy/linux/check-launch-env.js"
 if test "${1:-}" = --check; then
@@ -63,7 +63,7 @@ tar -czf "$backup_target.partial" --exclude='./data' --exclude='./public/uploads
 tar -tzf "$backup_target.partial" >/dev/null
 mv -- "$backup_target.partial" "$backup_target"
 code_backup=$backup_target
-for file in server.js seo-guides.js brand-catalogue.js media-library.js inquiry-notifications.js http-request.js package.json; do install -m 644 "$SOURCE_DIR/$file" "$APP_DIR/$file"; done
+for file in server.js applications.js company-pages.js international-search.js vietnam-search.js search-translations.json seo-guides.js brand-catalogue.js media-library.js inquiry-notifications.js http-request.js package.json; do install -m 644 "$SOURCE_DIR/$file" "$APP_DIR/$file"; done
 for file in index.html app.js admin.html admin.js tracking.js tracking.css guides.css brand-catalogue.css; do install -m 644 "$SOURCE_DIR/public/$file" "$APP_DIR/public/$file"; done
 install -d "$APP_DIR/public/assets/brand" "$APP_DIR/public/downloads"
 cp -R "$SOURCE_DIR/public/assets/brand/." "$APP_DIR/public/assets/brand/"
