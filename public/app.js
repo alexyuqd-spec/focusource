@@ -76,7 +76,11 @@ function renderPageContent() {
   $('[data-about-certifications]').innerHTML = (content.aboutCertifications || []).map((item) => `<span>${escapeHtml(item)}</span>`).join('');
   renderAboutMedia(content);
   $('[data-footer-products]').innerHTML = publishedProducts.slice(0, 4).map((item) => `<a href="${productUrl(item)}">${escapeHtml(item.name)}</a>`).join('');
-  $('[data-footer-company]').innerHTML = (state.data.menu || []).filter((item) => item.href !== '#products').slice(0, 4).map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join('');
+  const companyLinks = (state.data.menu || [])
+    .filter((item) => String(item.label || '').trim().toLowerCase() !== 'products')
+    .filter((item) => !/admin/i.test(`${item.href} ${item.label}`));
+  if (!companyLinks.some((item) => item.href === '/contact')) companyLinks.push({ label: 'Contact', href: '/contact' });
+  $('[data-footer-company]').innerHTML = companyLinks.map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join('');
   bindImageFallbacks();
 }
 
@@ -144,9 +148,20 @@ function applySettings() {
     url: settings.siteUrl,
     email: settings.email,
     telephone: settings.phone,
-    address: { '@type': 'PostalAddress', addressLocality: settings.address },
-    contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: settings.email, telephone: settings.phone, availableLanguage: ['English', 'Chinese'] }
+    '@id': `${String(settings.siteUrl || '').replace(/\/$/, '')}/#organization`,
+    description: settings.organizationDescription || `${settings.brandName} manufactures polyester (PET) composite strapping, woven lashing, wire buckles and tensioning tools in Qingdao, Shandong, China.`,
+    address: {
+      '@type': 'PostalAddress',
+      ...(settings.streetAddress ? { streetAddress: settings.streetAddress } : {}),
+      addressLocality: settings.addressLocality || 'Qingdao',
+      addressRegion: settings.addressRegion || 'Shandong',
+      addressCountry: settings.addressCountry || 'CN'
+    },
+    knowsAbout: ['PET strapping', 'Polyester composite strapping', 'Wire buckles', 'Woven lashing'],
+    contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: settings.email, telephone: settings.phone, areaServed: 'Worldwide', availableLanguage: ['English'] }
   };
+  if (settings.legalName) schema.legalName = settings.legalName;
+  if (settings.sameAs) schema.sameAs = [settings.sameAs];
   $('#organization-schema').textContent = JSON.stringify(schema);
 }
 

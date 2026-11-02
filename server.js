@@ -8,6 +8,7 @@ const { createInquiryNotifier } = require('./inquiry-notifications');
 const { guides, renderGuide, renderGuideIndex, renderGuideLinks, renderProductMedia } = require('./seo-guides');
 const { PDF_PATH, enhancePublicPage, renderCatalogue } = require('./brand-catalogue');
 const { enabled: vietnamPages, languageCodes, renderLocalized: renderVietnamese, enhanceLanguage, decorateLanguageMenu } = require('./international-search');
+const { renderAboutPage, renderContactPage } = require('./company-pages');
 
 const PORT = Number(process.env.PORT || 4173);
 const HOST = process.env.HOST || '127.0.0.1';
@@ -170,7 +171,8 @@ function renderProductGuidance(product) {
   }[product.id];
   const list = (items) => items.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
   const faqs = (category.faqs || []).filter((item) => item.question && item.answer);
-  return `<section class="section category-overview"><div class="container category-overview-grid"><div><p class="eyebrow">Typical uses</p><h2>Applications</h2><ul>${list(category.applications || [])}</ul></div><div><p class="eyebrow">Selecting your system</p><h2>What to consider</h2><ul>${list(category.benefits || [])}</ul><p>${escapeHtml(quoteDetails)}</p><a class="btn btn-primary" href="/?product=${encodeURIComponent(product.name)}#enquiry">Request a product recommendation</a></div></div></section>${faqs.length ? `<section class="section category-faq"><div class="container"><h2>Product questions</h2><div class="category-faq-list">${faqs.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join('')}</div></div></section>` : ''}`;
+  const faqSchema = faqs.length ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }).replace(/</g, '\\u003c')}</script>` : '';
+  return `<section class="section category-overview"><div class="container category-overview-grid"><div><p class="eyebrow">Typical uses</p><h2>Applications</h2><ul>${list(category.applications || [])}</ul></div><div><p class="eyebrow">Selecting your system</p><h2>What to consider</h2><ul>${list(category.benefits || [])}</ul><p>${escapeHtml(quoteDetails)}</p><a class="btn btn-primary" href="/?product=${encodeURIComponent(product.name)}#enquiry">Request a product recommendation</a></div></div></section>${faqs.length ? `<section class="section category-faq"><div class="container"><h2>Product questions</h2><div class="category-faq-list">${faqs.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join('')}</div></div></section>${faqSchema}` : ''}`;
 }
 
 function renderAboutMedia(content) {
@@ -225,6 +227,7 @@ function addCategoryNavigation(html) {
   return html
     .replace('/styles.css?v=9', '/styles.css?v=11')
     .replace('<a href="/#products">Products</a>', `<a href="/#products">Products</a>${desktopDropdown}`)
+    .replace('<a href="/about">About</a>', '<a href="/about">About</a><a href="/contact">Contact</a><a href="/#insights">Insights</a>')
     .replace('</header>', `</header><nav class="mobile-detail-nav" aria-label="Product categories">${mobileDropdown}</nav>`);
 }
 
@@ -241,7 +244,6 @@ function addProductPageNavigation(html, product) {
   return addCategoryNavigation(html
     .replace('<script type="application/ld+json">{}</script>', '')
     .replace('/styles.css?v=6', '/styles.css?v=9')
-    .replace('<a href="/#about">About</a>', '<a href="/#about">About</a><a href="/#insights">Insights</a>')
     .replace(/href="mailto:[^"]*\?subject=[^"]*"/g, `href="/?product=${encodeURIComponent(product.name)}#enquiry"`)
     .replace('<section class="section related-products">', `${renderProductGuidance(product)}${renderProductMedia(product)}<section class="section related-products">`)
     .replace(/(<a class="btn btn-outline" href="https:\/\/wa\.me\/\d+">)WhatsApp<\/a>/, `$1${whatsappBrandIcon}<span>WhatsApp</span></a>`));
@@ -260,9 +262,10 @@ function renderCategoryPage(category) {
   const faqs = (category.faqs || []).filter((item) => item.question && item.answer);
   const productHtml = categoryProducts.map((product) => `<article class="category-product"><a class="category-product-media" href="/products/${productSlug(product)}"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(productImageAlt(product))}" loading="lazy"></a><div class="category-product-copy"><p class="eyebrow">${escapeHtml(category.name)}</p><h2><a href="/products/${productSlug(product)}">${escapeHtml(product.name)}</a></h2><p>${escapeHtml(product.description)}</p><div class="detail-list"><div><span>Minimum order</span><strong>${escapeHtml(product.moq)}</strong></div><div><span>Lead time</span><strong>${escapeHtml(product.leadTime)}</strong></div><div><span>Materials</span><strong>${escapeHtml(product.materials)}</strong></div></div><a class="btn btn-primary btn-small" href="/products/${productSlug(product)}">View product details</a></div></article>${renderSpecificationTable(product.specificationTable)}`).join('');
   const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: category.name, description, url: pageUrl, mainEntity: { '@type': 'ItemList', itemListElement: categoryProducts.map((product, index) => ({ '@type': 'ListItem', position: index + 1, url: `${siteUrl}/products/${productSlug(product)}`, name: product.name })) } };
-  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` }, { '@type': 'ListItem', position: 2, name: 'Products', item: `${siteUrl}/#products` }, { '@type': 'ListItem', position: 3, name: category.name, item: pageUrl }] };
-  const faqHtml = faqs.length ? `<section class="section category-faq"><div class="container"><p class="eyebrow">Questions &amp; answers</p><h2>Frequently asked questions</h2><div class="category-faq-list">${faqs.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join('')}</div></div></section>` : '';
-  return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}"><meta name="robots" content="index, follow, max-image-preview:large"><meta property="og:type" content="website"><meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${escapeHtml(pageUrl)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="${escapeHtml(pageUrl)}"><link rel="icon" type="image/svg+xml" href="${escapeHtml(settings.logo)}"><link rel="stylesheet" href="/styles.css?v=9"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script><script type="application/ld+json">${JSON.stringify(breadcrumb).replace(/</g, '\\u003c')}</script></head><body><div class="topbar"><div class="container topbar-inner"><p><span class="signal-dot"></span> Factory-direct load securing systems · Worldwide delivery</p><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a></div></div><header class="site-header"><div class="container nav-shell"><a class="brand" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><nav class="desktop-nav"><a href="/#products">Products</a><a href="/#capabilities">Capabilities</a><a href="/#process">Process</a><a href="/#about">About</a><a href="/#insights">Insights</a></nav><a class="btn btn-primary btn-small" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${category.name}`)}">Get a quote</a></div></header><main><section class="category-page-hero"><div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/#products">Products</a><span>/</span><span>${escapeHtml(category.name)}</span></nav><p class="eyebrow">Product category</p><h1>${escapeHtml(category.name)}</h1><p>${escapeHtml(category.intro || '')}</p></div></section>${applications.length || benefits.length ? `<section class="section category-overview"><div class="container category-overview-grid">${applications.length ? `<div><p class="eyebrow">Where it is used</p><h2>Applications</h2><ul>${applications.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>` : ''}${benefits.length ? `<div><p class="eyebrow">Why choose this range</p><h2>Key benefits</h2><ul>${benefits.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>` : ''}</div></section>` : ''}<section class="section category-products"><div class="container"><p class="eyebrow">Available products</p><h2>${escapeHtml(category.name)} products and specifications</h2>${productHtml || '<p>Products in this category are being updated. Contact us for current specifications.</p>'}</div></section>${faqHtml}<section class="cta-band"><div class="container cta-layout"><div><p class="eyebrow">Need help selecting?</p><h2>Get a product recommendation for your load and shipment.</h2></div><a class="btn btn-accent" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${category.name}`)}">Request a quote</a></div></section></main><footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-light" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><p>${escapeHtml(settings.tagline)}</p></div><div><h3>Products</h3><a href="/#products">All products</a></div><div><h3>Company</h3><a href="/#about">About us</a><a href="/#process">Production process</a><a href="/#insights">Insights</a></div><div><h3>Contact</h3><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a><a href="tel:${escapeHtml(String(settings.phone || '').replace(/[^+\d]/g, ''))}">${escapeHtml(settings.phone)}</a><p>${escapeHtml(settings.address)}</p></div></div><div class="container footer-bottom"><span>© ${new Date().getFullYear()} ${escapeHtml(settings.brandName)}. All rights reserved.</span><a href="/">Back to homepage</a></div></footer></body></html>`;
+  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` }, { '@type': 'ListItem', position: 2, name: category.name, item: pageUrl }] };
+  const faqSchema = faqs.length ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }).replace(/</g, '\\u003c')}</script>` : '';
+  const faqHtml = faqs.length ? `<section class="section category-faq"><div class="container"><p class="eyebrow">Questions &amp; answers</p><h2>Frequently asked questions</h2><div class="category-faq-list">${faqs.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join('')}</div></div></section>${faqSchema}` : '';
+  return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}"><meta name="robots" content="index, follow, max-image-preview:large"><meta property="og:type" content="website"><meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${escapeHtml(pageUrl)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="${escapeHtml(pageUrl)}"><link rel="icon" type="image/svg+xml" href="${escapeHtml(settings.logo)}"><link rel="stylesheet" href="/styles.css?v=9"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script><script type="application/ld+json">${JSON.stringify(breadcrumb).replace(/</g, '\\u003c')}</script></head><body><div class="topbar"><div class="container topbar-inner"><p><span class="signal-dot"></span> Factory-direct load securing systems · Worldwide delivery</p><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a></div></div><header class="site-header"><div class="container nav-shell"><a class="brand" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><nav class="desktop-nav"><a href="/#products">Products</a><a href="/#capabilities">Capabilities</a><a href="/#process">Process</a><a href="/about">About</a><a href="/#insights">Insights</a></nav><a class="btn btn-primary btn-small" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${category.name}`)}">Get a quote</a></div></header><main><section class="category-page-hero"><div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>${escapeHtml(category.name)}</span></nav><p class="eyebrow">Product category</p><h1>${escapeHtml(category.name)}</h1><p>${escapeHtml(category.intro || '')}</p></div></section>${applications.length || benefits.length ? `<section class="section category-overview"><div class="container category-overview-grid">${applications.length ? `<div><p class="eyebrow">Where it is used</p><h2>Applications</h2><ul>${applications.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>` : ''}${benefits.length ? `<div><p class="eyebrow">Why choose this range</p><h2>Key benefits</h2><ul>${benefits.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>` : ''}</div></section>` : ''}<section class="section category-products"><div class="container"><p class="eyebrow">Available products</p><h2>${escapeHtml(category.name)} products and specifications</h2>${productHtml || '<p>Products in this category are being updated. Contact us for current specifications.</p>'}</div></section>${faqHtml}<section class="cta-band"><div class="container cta-layout"><div><p class="eyebrow">Need help selecting?</p><h2>Get a product recommendation for your load and shipment.</h2></div><a class="btn btn-accent" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${category.name}`)}">Request a quote</a></div></section></main><footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-light" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><p>${escapeHtml(settings.tagline)}</p></div><div><h3>Products</h3><a href="/catalogue">All products</a></div><div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/#process">Production process</a><a href="/#insights">Insights</a></div><div><h3>Contact</h3><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a><a href="tel:${escapeHtml(String(settings.phone || '').replace(/[^+\d]/g, ''))}">${escapeHtml(settings.phone)}</a><p>${escapeHtml(settings.address)}</p></div></div><div class="container footer-bottom"><span>© ${new Date().getFullYear()} ${escapeHtml(settings.brandName)}. All rights reserved.</span><a href="/">Back to homepage</a></div></footer></body></html>`;
 }
 
 function renderProductPage(product) {
@@ -275,14 +278,19 @@ function renderProductPage(product) {
   const related = products.filter((item) => item.active !== false && !['p4', 'p5', 'p6'].includes(item.id) && item.id !== product.id).slice(0, 3);
   const whatsapp = String(settings.whatsapp || '').replace(/\D/g, '');
   const schema = { '@context': 'https://schema.org', '@type': 'WebPage', url: pageUrl, name: title, description, primaryImageOfPage: { '@type': 'ImageObject', contentUrl: imageUrl, caption: productImageAlt(product) } };
-  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` }, { '@type': 'ListItem', position: 2, name: 'Products', item: `${siteUrl}/#products` }, { '@type': 'ListItem', position: 3, name: product.name, item: pageUrl }] };
+  const category = (readJson(SITE_FILE).categories || []).find((item) => item.active !== false && item.name === product.category);
+  const crumbTrail = [{ name: 'Home', href: '/' }];
+  if (category) crumbTrail.push({ name: category.name, href: `/categories/${categorySlug(category)}` });
+  crumbTrail.push({ name: product.name, href: `/products/${productSlug(product)}` });
+  const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbTrail.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: `${siteUrl}${item.href}` })) };
+  const productBreadcrumb = `<nav class="breadcrumbs" aria-label="Breadcrumb">${crumbTrail.map((item, index) => index === crumbTrail.length - 1 ? `<span>${escapeHtml(item.name)}</span>` : `<a href="${escapeHtml(item.href)}">${escapeHtml(item.name)}</a>`).join('<span>/</span>')}</nav>`;
   const relatedHtml = related.map((item) => `<a class="related-product-card" href="/products/${productSlug(item)}"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(productImageAlt(item))}"><div><span>${escapeHtml(item.category)}</span><h3>${escapeHtml(item.name)}</h3></div></a>`).join('');
-  return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}"><meta name="robots" content="index, follow, max-image-preview:large"><meta property="og:type" content="product"><meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${escapeHtml(pageUrl)}">${imageUrl ? `<meta property="og:image" content="${escapeHtml(imageUrl)}">` : ''}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${escapeHtml(imageUrl)}"><meta property="og:image:alt" content="${escapeHtml(productImageAlt(product))}"><meta name="theme-color" content="#17382d"><link rel="canonical" href="${escapeHtml(pageUrl)}"><link rel="icon" type="image/svg+xml" href="/assets/focusource-fsc.svg?v=3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css?v=6"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script><script type="application/ld+json">${JSON.stringify(breadcrumb).replace(/</g, '\\u003c')}</script></head><body><div class="topbar"><div class="container topbar-inner"><p><span class="signal-dot"></span> Factory-direct load securing systems · Worldwide delivery</p><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a></div></div><header class="site-header"><div class="container nav-shell"><a class="brand" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><nav class="desktop-nav"><a href="/#products">Products</a><a href="/#capabilities">Capabilities</a><a href="/#process">Process</a><a href="/#about">About</a></nav><a class="btn btn-primary btn-small" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${product.name}`)}">Get a quote</a></div></header><main><section class="product-page-hero"><div class="container product-page-grid"><div class="product-page-media"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(productImageAlt(product))}"></div><div class="product-page-copy"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/#products">Products</a><span>/</span><span>${escapeHtml(product.name)}</span></nav><p class="eyebrow">${escapeHtml(product.category)}</p><h1>${escapeHtml(product.name)}</h1><p class="product-page-intro">${escapeHtml(product.description)}</p><div class="detail-list"><div><span>Minimum order</span><strong>${escapeHtml(product.moq)}</strong></div><div><span>Typical lead time</span><strong>${escapeHtml(product.leadTime)}</strong></div><div><span>Materials</span><strong>${escapeHtml(product.materials)}</strong></div></div><div class="product-page-actions"><a class="btn btn-primary" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${product.name}`)}">Request a quote</a>${whatsapp ? `<a class="btn btn-outline" href="https://wa.me/${whatsapp}">WhatsApp</a>` : ''}</div></div></div></section>${renderSpecificationTable(product.specificationTable)}<section class="section related-products"><div class="container"><p class="eyebrow">More solutions</p><h2>Related products</h2><div class="related-product-grid">${relatedHtml}</div></div></section></main><footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-light" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><p>${escapeHtml(settings.tagline)}</p></div><div><h3>Products</h3><a href="/#products">All products</a><a href="/products/composite-cord-strapping">Composite Strapping</a><a href="/products/wire-buckles">Wire Buckles</a></div><div><h3>Company</h3><a href="/#about">About us</a><a href="/#process">Production process</a></div><div><h3>Contact</h3><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a><a href="tel:${escapeHtml(String(settings.phone || '').replace(/[^+\d]/g, ''))}">${escapeHtml(settings.phone)}</a><p>${escapeHtml(settings.address)}</p></div></div><div class="container footer-bottom"><span>© ${new Date().getFullYear()} ${escapeHtml(settings.brandName)}. All rights reserved.</span><a href="/">Back to homepage</a></div></footer></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(description)}"><meta name="robots" content="index, follow, max-image-preview:large"><meta property="og:type" content="product"><meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${escapeHtml(pageUrl)}">${imageUrl ? `<meta property="og:image" content="${escapeHtml(imageUrl)}">` : ''}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${escapeHtml(imageUrl)}"><meta property="og:image:alt" content="${escapeHtml(productImageAlt(product))}"><meta name="theme-color" content="#17382d"><link rel="canonical" href="${escapeHtml(pageUrl)}"><link rel="icon" type="image/svg+xml" href="/assets/focusource-fsc.svg?v=3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css?v=6"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script><script type="application/ld+json">${JSON.stringify(breadcrumb).replace(/</g, '\\u003c')}</script></head><body><div class="topbar"><div class="container topbar-inner"><p><span class="signal-dot"></span> Factory-direct load securing systems · Worldwide delivery</p><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a></div></div><header class="site-header"><div class="container nav-shell"><a class="brand" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><nav class="desktop-nav"><a href="/#products">Products</a><a href="/#capabilities">Capabilities</a><a href="/#process">Process</a><a href="/about">About</a></nav><a class="btn btn-primary btn-small" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${product.name}`)}">Get a quote</a></div></header><main><section class="product-page-hero"><div class="container product-page-grid"><div class="product-page-media"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(productImageAlt(product))}"></div><div class="product-page-copy">${productBreadcrumb}<p class="eyebrow">${escapeHtml(product.category)}</p><h1>${escapeHtml(product.name)}</h1><p class="product-page-intro">${escapeHtml(product.description)}</p><div class="detail-list"><div><span>Minimum order</span><strong>${escapeHtml(product.moq)}</strong></div><div><span>Typical lead time</span><strong>${escapeHtml(product.leadTime)}</strong></div><div><span>Materials</span><strong>${escapeHtml(product.materials)}</strong></div></div><div class="product-page-actions"><a class="btn btn-primary" href="mailto:${escapeHtml(settings.email)}?subject=${encodeURIComponent(`Quote request: ${product.name}`)}">Request a quote</a>${whatsapp ? `<a class="btn btn-outline" href="https://wa.me/${whatsapp}">WhatsApp</a>` : ''}</div></div></div></section>${renderSpecificationTable(product.specificationTable)}<section class="section related-products"><div class="container"><p class="eyebrow">More solutions</p><h2>Related products</h2><div class="related-product-grid">${relatedHtml}</div></div></section></main><footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-light" href="/"><img class="brand-logo" src="${escapeHtml(settings.logo)}" alt="${escapeHtml(settings.brandName)} logo"><span>${escapeHtml(settings.brandName)}</span></a><p>${escapeHtml(settings.tagline)}</p></div><div><h3>Products</h3><a href="/catalogue">All products</a><a href="/products/composite-cord-strapping">Composite Strapping</a><a href="/products/wire-buckles">Wire Buckles</a></div><div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/#process">Production process</a></div><div><h3>Contact</h3><a href="mailto:${escapeHtml(settings.email)}">${escapeHtml(settings.email)}</a><a href="tel:${escapeHtml(String(settings.phone || '').replace(/[^+\d]/g, ''))}">${escapeHtml(settings.phone)}</a><p>${escapeHtml(settings.address)}</p></div></div><div class="container footer-bottom"><span>© ${new Date().getFullYear()} ${escapeHtml(settings.brandName)}. All rights reserved.</span><a href="/">Back to homepage</a></div></footer></body></html>`;
 }
 
 function renderIndex() {
   const html = fs.readFileSync(path.join(PUBLIC_DIR, 'index.html'), 'utf8');
-  const { settings, content = {}, products, categories = [] } = readJson(SITE_FILE);
+  const { settings, content = {}, products, categories = [], menu = [] } = readJson(SITE_FILE);
   const siteUrl = String(settings.siteUrl || '').replace(/\/$/, '');
   const schema = {
     '@context': 'https://schema.org',
@@ -291,15 +299,27 @@ function renderIndex() {
     url: siteUrl,
     email: settings.email,
     telephone: settings.phone,
-    address: { '@type': 'PostalAddress', addressLocality: settings.address },
+    '@id': `${siteUrl}/#organization`,
+    description: settings.organizationDescription || `${settings.brandName} manufactures polyester (PET) composite strapping, woven lashing, wire buckles and tensioning tools in Qingdao, Shandong, China.`,
+    address: {
+      '@type': 'PostalAddress',
+      ...(settings.streetAddress ? { streetAddress: settings.streetAddress } : {}),
+      addressLocality: settings.addressLocality || 'Qingdao',
+      addressRegion: settings.addressRegion || 'Shandong',
+      addressCountry: settings.addressCountry || 'CN'
+    },
+    knowsAbout: ['PET strapping', 'Polyester composite strapping', 'Wire buckles', 'Woven lashing'],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
       email: settings.email,
       telephone: settings.phone,
-      availableLanguage: ['English', 'Chinese']
+      areaServed: 'Worldwide',
+      availableLanguage: ['English']
     }
   };
+  if (settings.legalName) schema.legalName = settings.legalName;
+  if (settings.sameAs) schema.sameAs = [settings.sameAs];
   const publishedProducts = products.filter((product) => product.active !== false && !['p4', 'p5', 'p6'].includes(product.id));
   const primaryProduct = publishedProducts.find((product) => product.id === 'p1' && product.image);
   const primaryImage = absoluteUrl(siteUrl, primaryProduct?.image || settings.heroImage);
@@ -359,6 +379,8 @@ function renderIndex() {
     .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escapeHtml(settings.seoDescription)}">\n  ${socialMeta}`)
     .replace(/<meta name="keywords" content="[^"]*">/, `<meta name="keywords" content="${escapeHtml(settings.seoKeywords)}">`)
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${escapeHtml(siteUrl)}/">`)
+    .replace('<nav class="desktop-nav" aria-label="Primary navigation" data-menu></nav>', `<nav class="desktop-nav" aria-label="Primary navigation" data-menu>${menu.filter((item) => !/admin/i.test(`${item.href} ${item.label}`)).map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join('')}</nav>`)
+    .replace('<div data-footer-company></div>', `<div data-footer-company>${menu.filter((item) => String(item.label || '').toLowerCase() !== 'products' && !/admin/i.test(`${item.href} ${item.label}`)).map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join('')}</div>`)
     .replace(/<!-- about-media:start -->[\s\S]*?<!-- about-media:end -->/, renderAboutMedia(content))
     .replace(/(<nav class="category-link-row" data-category-links[^>]*>)[\s\S]*?(<\/nav>)/, `$1${categoryLinks}$2`)
     .replace(/<script type="application\/ld\+json" id="organization-schema">[\s\S]*?<\/script>/, `<script type="application/ld+json" id="organization-schema">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`)
@@ -383,7 +405,7 @@ function renderSitemap() {
   const vietnamUrls = vietnamPages(readJson(SITE_FILE)).map(page => `<url><loc>${escapeHtml(siteUrl + page.path)}</loc><lastmod>${modified > vietnamModified ? modified : vietnamModified}</lastmod></url>`).join('\n');
   const catalogueUrl = `<url><loc>${escapeHtml(siteUrl)}/catalogue</loc><lastmod>${fs.statSync(path.join(__dirname, 'brand-catalogue.js')).mtime.toISOString()}</lastmod></url>\n${vietnamUrls}`;
   const videoEntry = content.aboutVideo ? `\n    <video:video>\n      <video:thumbnail_loc>${escapeHtml(absoluteUrl(siteUrl, content.aboutVideoPoster || content.aboutImage))}</video:thumbnail_loc>\n      <video:title>${escapeHtml(content.aboutVideoTitle || 'Composite strapping production workshop')}</video:title>\n      <video:description>${escapeHtml(content.aboutVideoDescription || content.aboutText || settings.seoDescription)}</video:description>\n      <video:content_loc>${escapeHtml(absoluteUrl(siteUrl, content.aboutVideo))}</video:content_loc>\n    </video:video>` : '';
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n  <url>\n    <loc>${escapeHtml(siteUrl)}/</loc>\n    <lastmod>${modified}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>${videoEntry}\n  </url>\n${categoryUrls}\n${productUrls}\n${guideUrls}\n${catalogueUrl}\n${applicationRoutes.map(route => `<url><loc>${escapeHtml(siteUrl)}${route}</loc></url>`).join('\n')}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n  <url>\n    <loc>${escapeHtml(siteUrl)}/</loc>\n    <lastmod>${modified}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>${videoEntry}\n  </url>\n${categoryUrls}\n${productUrls}\n${guideUrls}\n${catalogueUrl}\n${applicationRoutes.map(route => `<url><loc>${escapeHtml(siteUrl)}${route}</loc></url>`).join('\n')}\n  <url><loc>${escapeHtml(siteUrl)}/about</loc><lastmod>${modified}</lastmod></url>\n  <url><loc>${escapeHtml(siteUrl)}/contact</loc><lastmod>${modified}</lastmod></url>\n</urlset>\n`;
 }
 
 function parseByteRange(header, size) {
@@ -583,6 +605,12 @@ function serveStatic(req, res, pathname) {
     if (!html) return send(res, 404, 'Guide not found', 'text/plain; charset=utf-8');
     return send(res, 200, html, 'text/html; charset=utf-8', 'no-cache');
   }
+  if (pathname === '/about') {
+    return send(res, 200, decorateLanguageMenu(renderAboutPage(readJson(SITE_FILE)), readJson(SITE_FILE)), 'text/html; charset=utf-8', 'no-cache');
+  }
+  if (pathname === '/contact') {
+    return send(res, 200, decorateLanguageMenu(renderContactPage(readJson(SITE_FILE)), readJson(SITE_FILE)), 'text/html; charset=utf-8', 'no-cache');
+  }
   if (pathname === '/' || pathname === '/index.html') {
     return send(res, 200, enhanceLanguage(renderIndex(), readJson(SITE_FILE), '/'), 'text/html; charset=utf-8', 'no-cache');
   }
@@ -619,16 +647,60 @@ function serveStatic(req, res, pathname) {
   });
 }
 
+function canonicalRedirectTarget(req) {
+  let origin = 'https://www.composite-strapping.com';
+  try {
+    const configured = new URL(String(readJson(SITE_FILE).settings.siteUrl || origin));
+    if (configured.protocol !== 'https:') configured.protocol = 'https:';
+    origin = configured.origin;
+  } catch { /* keep the public canonical host */ }
+  const hostRaw = String(req.headers.host || '').split(',')[0].trim().toLowerCase();
+  const hostname = hostRaw.startsWith('[') || /[\s/\\]/.test(hostRaw) ? '' : hostRaw.replace(/:\d+$/, '').replace(/\.$/, '');
+  let canonicalHost = 'www.composite-strapping.com';
+  try { canonicalHost = new URL(origin).hostname; } catch { /* default host */ }
+  const apex = canonicalHost.replace(/^www\./, '');
+  if (!hostname || (hostname !== canonicalHost && hostname !== apex)) return '';
+  const forwarded = String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim().toLowerCase();
+  const proto = forwarded === 'https' || forwarded === 'http' ? forwarded : 'http';
+  if (proto === 'https' && hostname === canonicalHost) return '';
+  const raw = typeof req.url === 'string' ? req.url : '/';
+  const safe = raw.startsWith('/') && !raw.startsWith('//') && !/[\r\n]/.test(raw) ? raw : '/';
+  return `${origin}${safe}`;
+}
+
 const server = http.createServer(async (req, res) => {
   try {
-    const url = new URL(req.url, 'http://localhost');
-    if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/admin')) res.setHeader('X-Robots-Tag', 'noindex, nofollow');
-    if (url.pathname === '/healthz' && ['GET', 'HEAD'].includes(req.method)) return send(res, 200, JSON.stringify({ ok: true }));
-    if (url.pathname.startsWith('/api/')) return await handleApi(req, res, url.pathname);
-    return serveStatic(req, res, decodeURIComponent(url.pathname));
+    const target = canonicalRedirectTarget(req);
+    if (target) {
+      res.writeHead(301, {
+        Location: target,
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600',
+        'X-Content-Type-Options': 'nosniff'
+      });
+      return res.end('Moved Permanently');
+    }
+    let url;
+    try {
+      url = new URL(req.url || '/', 'http://localhost');
+    } catch {
+      return send(res, 400, 'Bad request', 'text/plain; charset=utf-8');
+    }
+    let pathname;
+    try {
+      pathname = decodeURIComponent(url.pathname);
+    } catch {
+      return send(res, 400, 'Bad request', 'text/plain; charset=utf-8');
+    }
+    if (pathname.startsWith('/api/') || pathname.startsWith('/admin')) res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+    if (pathname === '/healthz' && ['GET', 'HEAD'].includes(req.method)) return send(res, 200, JSON.stringify({ ok: true }));
+    if (pathname.startsWith('/api/')) return await handleApi(req, res, pathname);
+    return serveStatic(req, res, pathname);
   } catch (error) {
     console.error(error);
-    return send(res, error.status || 500, JSON.stringify({ error: error.status ? error.message : 'Server error. Please try again.' }));
+    const pathname = String(req.url || '').split('?')[0];
+    if (pathname.startsWith('/api/')) return send(res, 500, JSON.stringify({ error: 'Server error. Please try again.' }));
+    return send(res, 500, 'Server error. Please try again.', 'text/plain; charset=utf-8');
   }
 });
 

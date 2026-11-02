@@ -3,20 +3,28 @@
     "brandName": "FOCUSOURCE",
     "logo": "/assets/brand/fsc-symbol.svg?v=20261024",
     "tagline": "Safer load securing with composite strapping",
-    "heroTitle": "Flexible strapping. Secure every load.",
+    "heroTitle": "Composite and PET strapping manufacturer",
     "heroText": "Polyester composite strapping, wire buckles and tensioning tools. A complete system for securing pallets, steel and machinery — from your factory to their destination.",
     "heroImage": "/assets/strapping/photos/composite-strapping-factory-green-floor.webp",
     "email": "alexyuqd@gmail.com",
     "phone": "+86 18661433121",
     "whatsapp": "+86 18661433121",
-    "address": "Qingdao, Shandong, China",
-    "seoTitle": "Composite Strapping Manufacturer & Wire Buckles | FOCUSOURCE",
+    "address": "No. 17 Building, No. 716 Qingshan Road, Qingdao, Shandong, China",
+    "seoTitle": "Composite & PET Strapping Manufacturer | FOCUSOURCE",
     "seoDescription": "Composite strap and strapping systems with matched wire buckles and manual tensioners. Compare 13–32 mm specifications and request a quote from FOCUSOURCE.",
     "seoKeywords": "composite strapping, polyester cord strapping, flexible packing belt, corded strapping manufacturer, wire buckles, cargo securing",
     "siteUrl": "https://www.composite-strapping.com",
     "gaId": "",
     "googleAdsId": "",
-    "googleAdsLabel": ""
+    "googleAdsLabel": "",
+    "legalName": "Qingdao Focusource Industrial & Trade Co., Ltd.",
+    "streetAddress": "No. 17 Building, No. 716 Qingshan Road",
+    "addressLocality": "Qingdao",
+    "addressRegion": "Shandong",
+    "postalCode": "",
+    "addressCountry": "CN",
+    "sameAs": "https://www.focusource.com",
+    "organizationDescription": "FOCUSOURCE (Qingdao Focusource Industrial & Trade Co., Ltd.) manufactures polyester (PET) composite cord strapping, hotmelt strapping, woven lashing, wire buckles and tensioning tools in Qingdao, Shandong, China."
   },
   "content": {
     "topbarText": "Factory-direct composite strapping · Worldwide delivery",
@@ -156,12 +164,17 @@
     {
       "id": "m4",
       "label": "About",
-      "href": "#about"
+      "href": "/about"
     },
     {
       "id": "m5",
       "label": "Insights",
       "href": "#insights"
+    },
+    {
+      "id": "m6",
+      "label": "Contact",
+      "href": "/contact"
     }
   ],
   "categories": [
@@ -185,15 +198,15 @@
       "faqs": [
         {
           "question": "How do I select a composite strap width?",
-          "answer": "Match the strap's system strength to the load, transport movement and lashing configuration. Share cargo details with us for a recommendation."
+          "answer": "FOCUSOURCE composite cord strapping is published from 13 mm to 32 mm. Match the item code minimum system breaking strength, from 480 daN (CS40, 13 mm) to 2600 daN (CS106, 32 mm twisted yarn), to the load, transport movement and lashing configuration."
         },
         {
           "question": "Can composite cord strapping be used outdoors?",
-          "answer": "It is suitable for many export and industrial applications. Confirm exposure duration, weather conditions and required protection when requesting a quotation."
+          "answer": "FOCUSOURCE composite cord strapping is used for export and industrial loads. The specification table does not state a maximum outdoor exposure time, so confirm exposure, weather and protection when requesting a quotation."
         },
         {
           "question": "Which buckle should I use with the strap?",
-          "answer": "Choose a buckle compatible with the strap width and lashing method. Wire buckles are commonly paired with composite cord strapping."
+          "answer": "Pair FOCUSOURCE composite cord strapping with a wire buckle for that strap width. Published wire diameters run from 3.3 mm to 7.0 mm. Confirmed families include CS40/WB13, CS50/WB16, CS60/WB19, CS85/WB25 and CS105/WB32."
         }
       ],
       "active": true
@@ -251,15 +264,15 @@
       "faqs": [
         {
           "question": "What widths are available?",
-          "answer": "The current range includes 32 mm, 40 mm and 50 mm options. Refer to each product specification for breaking strength and packing."
+          "answer": "FOCUSOURCE woven polyester lashing is listed at 32 mm (Lash105), 40 mm (Lash200) and 50 mm (Lash500). Minimum system breaking strength is 3400 daN for 32 mm and 8000 daN for 40 mm and 50 mm."
         },
         {
           "question": "Can woven lashing be reused?",
-          "answer": "Reuse depends on the lashing method, condition and applicable cargo-securing rules. Inspect for cuts, abrasion, contamination or damaged stitching before every use."
+          "answer": "Reuse of FOCUSOURCE woven polyester lashing depends on the lashing method, the condition of the textile and the cargo-securing rules that apply. Inspect for cuts, abrasion, contamination or damaged stitching before every use."
         },
         {
           "question": "What information is needed for a quote?",
-          "answer": "Provide cargo weight and dimensions, lashing arrangement, required length, destination and target delivery date."
+          "answer": "For a FOCUSOURCE woven lashing quote, provide cargo weight and dimensions, the lashing arrangement, required length, destination and target delivery date."
         }
       ],
       "active": true
@@ -284,15 +297,15 @@
       "faqs": [
         {
           "question": "How do I match a wire buckle to my strap?",
-          "answer": "Match the buckle size to strap width and follow the recommended threading and tensioning procedure for the selected system."
+          "answer": "Match the FOCUSOURCE wire buckle to the composite strap width and follow the threading method for that system. Published wire diameters are 3.3 mm, 3.5 mm, 4.0 mm, 4.3 mm, 5.0 mm, 6.0 mm and 7.0 mm."
         },
         {
           "question": "What surface treatments are available?",
-          "answer": "Electroplated and phosphated finishes are listed for this range. Confirm the required finish and corrosion conditions when ordering."
+          "answer": "FOCUSOURCE lists electroplated and phosphated finishes for this wire buckle range. Confirm the finish and the corrosion conditions when ordering."
         },
         {
           "question": "How are wire buckles packed?",
-          "answer": "Packing quantity and carton dimensions vary by model. Check the technical specification table for model-level details."
+          "answer": "Packing depends on the item code. WB1333 (3.3 mm) is 1000 pieces per box at 9.3 kg in a 35×26×10.5 cm carton, and WB3270 (7.0 mm) is 250 pieces per box at 22.0 kg in a 35×26×19.5 cm carton. The specification table lists every model."
         }
       ],
       "active": true
@@ -371,7 +384,7 @@
       "id": "c-dispenser",
       "name": "Dispenser",
       "slug": "strapping-dispenser",
-      "seoTitle": "Mobile Strapping Dispenser Trolley | FOCUSOURCE",
+      "seoTitle": "Strapping Dispenser Trolleys | FOCUSOURCE",
       "seoDescription": "Mobile dispenser trolley for composite strapping and woven lashing rolls, with 200 mm and 400 mm core options and tool storage tray.",
       "intro": "A mobile strapping dispenser keeps coils organized at the packing station and makes material easier to move and dispense. Confirm roll dimensions and core compatibility before ordering.",
       "applications": [
@@ -387,15 +400,15 @@
       "faqs": [
         {
           "question": "Which coil cores are supported?",
-          "answer": "The product information lists 200 mm and 400 mm core sizes. Confirm the roll's inner diameter and dimensions before ordering."
+          "answer": "The FOCUSOURCE mobile strapping dispenser lists 200 mm and 400 mm core sizes. Confirm the coil inner diameter and overall dimensions before ordering."
         },
         {
           "question": "Can the trolley hold buckles and tools?",
-          "answer": "The design includes a tray intended for buckles and hand tools. Confirm load capacity and dimensions for your setup."
+          "answer": "The FOCUSOURCE dispenser includes a tray for buckles and hand tools. Confirm the tray load and dimensions for the packing station."
         },
         {
           "question": "Is the dispenser supplied with strapping?",
-          "answer": "The dispenser is listed as equipment. Contact us to confirm whether strapping or accessories are included in a specific quotation."
+          "answer": "The FOCUSOURCE mobile strapping dispenser is listed as equipment. Ask whether strapping or accessories are included in a specific quotation."
         }
       ],
       "active": true
@@ -404,7 +417,7 @@
       "id": "c-vmpet",
       "name": "Vacuum Metallized Polyester Film",
       "slug": "vacuum-metallized-polyester-film",
-      "seoTitle": "Vacuum Metallized Polyester Film VMPET | FOCUSOURCE",
+      "seoTitle": "VMPET Film for Protective Covering | FOCUSOURCE",
       "seoDescription": "Explore reflective VMPET laminated woven polyester film V-4110. Review its 120-micron construction, roll dimensions and technical data.",
       "intro": "The V-4110 vacuum metallized polyester film is a reflective laminated roll material combining VMPET, PE and woven polyester layers. Review the listed technical properties and confirm application requirements with the supplier.",
       "applications": [
@@ -605,7 +618,7 @@
       "name": "Mobile Strapping Dispenser",
       "category": "Dispenser",
       "description": "Mobile dispenser trolley for composite cord strapping and woven lashing coils. Keeps strapping organized and easy to dispense while providing a tray for buckles and hand tools.\nCore size: 200mm and 400mm",
-      "seoTitle": "Mobile Strapping Dispenser Trolley | FOCUSOURCE",
+      "seoTitle": "Mobile Dispenser, 200 & 400 mm Cores | FOCUSOURCE",
       "seoDescription": "Mobile dispenser trolley for composite strapping and woven lashing coils. Supports 200 mm and 400 mm cores with a convenient buckle and tool tray.",
       "image": "/assets/strapping/photos/strapping-dispenser.jpg",
       "imageAlt": "Black wheeled strapping dispenser with a yellow strap roll and upper tool tray.",
@@ -621,7 +634,7 @@
       "name": "Vacuum Metallized Polyester Film",
       "category": "Vacuum Metallized Polyester Film",
       "description": "Reflective VMPET laminated film supplied in roll form. The V-4110 construction combines VMPET, PE and a woven polyethylene reinforcing layer for packaging and protective covering applications.",
-      "seoTitle": "Vacuum Metallized Polyester Film VMPET | FOCUSOURCE",
+      "seoTitle": "V-4110 VMPET Film, 120 µm Rolls | FOCUSOURCE",
       "seoDescription": "V-4110 vacuum metallized polyester film with VMPET, PE and a woven polyethylene reinforcing layer. Reflective 120-micron roll material for packaging and protective covering.",
       "image": "/assets/strapping/photos/vacuum-metallized-polyester-film.jpg",
       "imageAlt": "Reflective silver VMPET laminate roll with a visible woven texture.",

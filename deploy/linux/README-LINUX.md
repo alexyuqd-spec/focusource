@@ -51,7 +51,7 @@ curl -I http://127.0.0.1:4173/
 
 ## 4. Configure Nginx
 
-Edit `deploy/linux/focusource-nginx.conf` and replace `example.com` with the real domain, then install it:
+`deploy/linux/focusource-nginx.conf` answers port 80 with a 301 to `https://www.composite-strapping.com`. It does not proxy HTTP to Node.
 
 ```bash
 sudo cp /var/www/focusource/deploy/linux/focusource-nginx.conf /etc/nginx/sites-available/focusource
@@ -60,12 +60,12 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-Configure HTTPS after DNS is active, for example with Certbot.
+Comment out the two `listen 443 ssl` servers until `/etc/letsencrypt/live/www.composite-strapping.com/` exists. A missing certificate makes nginx reject the whole file, including the HTTP redirect.
 
 ## Addresses
 
-- Frontend: `https://example.com/`
-- Admin: `https://example.com/admin.html`
+- Frontend: `https://www.composite-strapping.com/`
+- Admin, direct URL only: `https://www.composite-strapping.com/admin.html`
 
 ## Useful commands
 
